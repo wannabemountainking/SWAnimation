@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F94DC2FDC5CD400B00A91 /* TemplateView.swift */; };
 		EE9DA0B82FDBFB6E00A2C50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */; };
 		EE9DA0B92FDBFB6E00A2C50E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */; };
 		EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		917F94DC2FDC5CD400B00A91 /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
 		EE9DA0A62FDBFB3D00A2C50E /* SWAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,6 +32,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		917F94D82FDC5C6A00B00A91 /* 00_ APP */ = {
+			isa = PBXGroup;
+			children = (
+				EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */,
+				EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */,
+				917F94DC2FDC5CD400B00A91 /* TemplateView.swift */,
+			);
+			path = "00_ APP";
+			sourceTree = "<group>";
+		};
+		917F94DA2FDC5C9300B00A91 /* 01_Practice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 01_Practice;
+			sourceTree = "<group>";
+		};
+		917F94DB2FDC5CA800B00A91 /* 02_Basic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 02_Basic;
+			sourceTree = "<group>";
+		};
 		EE9DA09D2FDBFB3D00A2C50E = {
 			isa = PBXGroup;
 			children = (
@@ -50,8 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */,
-				EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */,
-				EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */,
+				917F94DB2FDC5CA800B00A91 /* 02_Basic */,
+				917F94DA2FDC5C9300B00A91 /* 01_Practice */,
+				917F94D82FDC5C6A00B00A91 /* 00_ APP */,
 			);
 			path = SWAnimation;
 			sourceTree = "<group>";
@@ -130,6 +157,7 @@
 			files = (
 				EE9DA0B92FDBFB6E00A2C50E /* ContentView.swift in Sources */,
 				EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */,
+				917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
