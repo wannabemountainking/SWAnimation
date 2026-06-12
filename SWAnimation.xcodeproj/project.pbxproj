@@ -6,17 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EE9DA0B82FDBFB6E00A2C50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */; };
+		EE9DA0B92FDBFB6E00A2C50E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */; };
+		EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		EE9DA0A62FDBFB3D00A2C50E /* SWAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAnimationApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		EE9DA0A82FDBFB3D00A2C50E /* SWAnimation */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SWAnimation;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EE9DA0A32FDBFB3D00A2C50E /* Frameworks */ = {
@@ -32,7 +33,7 @@
 		EE9DA09D2FDBFB3D00A2C50E = {
 			isa = PBXGroup;
 			children = (
-				EE9DA0A82FDBFB3D00A2C50E /* SWAnimation */,
+				EE9DA0B72FDBFB6E00A2C50E /* SWAnimation */,
 				EE9DA0A72FDBFB3D00A2C50E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +44,16 @@
 				EE9DA0A62FDBFB3D00A2C50E /* SWAnimation.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EE9DA0B72FDBFB6E00A2C50E /* SWAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */,
+				EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */,
+				EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */,
+			);
+			path = SWAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +70,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				EE9DA0A82FDBFB3D00A2C50E /* SWAnimation */,
 			);
 			name = SWAnimation;
 			packageProductDependencies = (
@@ -109,6 +117,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE9DA0B82FDBFB6E00A2C50E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +128,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE9DA0B92FDBFB6E00A2C50E /* ContentView.swift in Sources */,
+				EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
