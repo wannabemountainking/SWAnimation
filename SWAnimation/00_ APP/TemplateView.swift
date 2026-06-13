@@ -29,7 +29,33 @@ struct TemplateView<Content: View>: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		ScrollView {
+			VStack(alignment: .leading, spacing: 15) {
+				// title
+				Text(title)
+					.font(.title)
+					.bold()
+					.foregroundStyle(Color.accentColor)
+				
+				Divider()
+				
+				// 설명
+				Text(descriptionText)
+					.font(.body)
+					.foregroundStyle(Color.ppurple2)
+				
+				// 사용자 정의 콘텐츠 영역
+				content
+				
+				// 노트 영역
+				if let notes = notes, !notes.isEmpty {
+					Text(notes)
+						.font(.footnote)
+						.foregroundStyle(Color.secondary)
+				}
+			} //:VSTACK
+			.padding()
+		} //:SCROLL
     }
 }
 
@@ -49,3 +75,5 @@ struct TemplateView<Content: View>: View {
         notes: "주의사항: 팁: 옵셔널"
     )
 }
+
+

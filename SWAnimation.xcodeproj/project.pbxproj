@@ -11,6 +11,7 @@
 		EE9DA0B82FDBFB6E00A2C50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */; };
 		EE9DA0B92FDBFB6E00A2C50E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */; };
 		EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */; };
+		EED2C2402FDCED2E00345AEB /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2C23F2FDCED2E00345AEB /* PurpleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAnimationApp.swift; sourceTree = "<group>"; };
+		EED2C23F2FDCED2E00345AEB /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 				EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */,
 				EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */,
 				917F94DC2FDC5CD400B00A91 /* TemplateView.swift */,
+				EED2C23F2FDCED2E00345AEB /* PurpleButton.swift */,
 			);
 			path = "00_ APP";
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE9DA0B92FDBFB6E00A2C50E /* ContentView.swift in Sources */,
+				EED2C2402FDCED2E00345AEB /* PurpleButton.swift in Sources */,
 				EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */,
 				917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */,
 			);
