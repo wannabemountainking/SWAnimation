@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		916FFE052FDFEB0D003F9473 /* FrameOpcityAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916FFE042FDFEB0D003F9473 /* FrameOpcityAnimate.swift */; };
 		917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F94DC2FDC5CD400B00A91 /* TemplateView.swift */; };
 		EE88C9822FDFA5660006FFC0 /* LocationAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */; };
 		EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		916FFE042FDFEB0D003F9473 /* FrameOpcityAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameOpcityAnimate.swift; sourceTree = "<group>"; };
 		917F94DC2FDC5CD400B00A91 /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
 		EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnimate.swift; sourceTree = "<group>"; };
 		EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curves1.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				EEAB4B712FDEA5B900C4145B /* Intro1.swift */,
 				EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */,
 				EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */,
+				916FFE042FDFEB0D003F9473 /* FrameOpcityAnimate.swift */,
 			);
 			path = 01_Basic;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				EED2C2402FDCED2E00345AEB /* PurpleButton.swift in Sources */,
 				EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */,
 				EEAB4B722FDEA5B900C4145B /* Intro1.swift in Sources */,
+				916FFE052FDFEB0D003F9473 /* FrameOpcityAnimate.swift in Sources */,
 				917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */,
 				EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */,
 			);
