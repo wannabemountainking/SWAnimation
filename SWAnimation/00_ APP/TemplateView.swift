@@ -20,7 +20,7 @@ struct TemplateView<Content: View>: View {
         title: String,
         descriptionText: String,
         @ViewBuilder content: () -> Content,
-        notes: String?
+		notes: String? = nil
     ) {
         self.title = title
         self.descriptionText = descriptionText
