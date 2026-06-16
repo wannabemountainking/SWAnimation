@@ -82,6 +82,14 @@ struct TextAnimate: View {
 									}
 								}
 							)
+                            // change값이 변경될 때 어떤 각도에 있던지 간에 newValue == false인 경우, 즉 change가 true -> false로 바뀔 때 (버튼을 눌러 정지시킬 때 false가 됨) ratationAngle = 0 처리
+                            .onChange(of: change) { _, newValue in
+                                if !newValue {
+                                    withAnimation(.easeInOut(duration: 1)) {
+                                        rotationAngle = 0
+                                    }
+                                }
+                            }
 						} //:VSTACK
 					} //:VSTACK
 				}//: contents
