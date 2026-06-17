@@ -91,6 +91,12 @@ struct TextAnimate: View {
                                 }
                             }
 						} //:VSTACK
+						
+						Circle()
+							.trim(from: 0, to: change ? 1 : 0)
+							.stroke(Color.green, style: StrokeStyle(lineWidth: 5, lineCap: .round))
+							.frame(width: 200, height: 200)
+							.animation(.easeInOut(duration: 1), value: change)
 					} //:VSTACK
 				}//: contents
 			) //: TemplateView
