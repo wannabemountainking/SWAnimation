@@ -11,6 +11,7 @@
 		917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F94DC2FDC5CD400B00A91 /* TemplateView.swift */; };
 		EE1A9ADC2FE3822B00F5E16D /* DurationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A9ADB2FE3822B00F5E16D /* DurationOption.swift */; };
 		EE1A9ADE2FE3885100F5E16D /* DelayOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A9ADD2FE3885100F5E16D /* DelayOption.swift */; };
+		EE1A9AE02FE38F4200F5E16D /* ColorPulseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A9ADF2FE38F4200F5E16D /* ColorPulseView.swift */; };
 		EE389AB62FE13C68006F8252 /* TextColorsizeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE389AB52FE13C68006F8252 /* TextColorsizeAnimationView.swift */; };
 		EE389AB82FE13F9A006F8252 /* TextAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE389AB72FE13F9A006F8252 /* TextAnimate.swift */; };
 		EE7DBAD12FE232AD0092EB69 /* TrimAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */; };
@@ -29,6 +30,7 @@
 		917F94DC2FDC5CD400B00A91 /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
 		EE1A9ADB2FE3822B00F5E16D /* DurationOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationOption.swift; sourceTree = "<group>"; };
 		EE1A9ADD2FE3885100F5E16D /* DelayOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayOption.swift; sourceTree = "<group>"; };
+		EE1A9ADF2FE38F4200F5E16D /* ColorPulseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPulseView.swift; sourceTree = "<group>"; };
 		EE389AB52FE13C68006F8252 /* TextColorsizeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColorsizeAnimationView.swift; sourceTree = "<group>"; };
 		EE389AB72FE13F9A006F8252 /* TextAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnimate.swift; sourceTree = "<group>"; };
 		EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimAnimate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */,
 				EE1A9ADB2FE3822B00F5E16D /* DurationOption.swift */,
 				EE1A9ADD2FE3885100F5E16D /* DelayOption.swift */,
+				EE1A9ADF2FE38F4200F5E16D /* ColorPulseView.swift */,
 				916FFE042FDFEB0D003F9473 /* FrameOpcityAnimate.swift */,
 			);
 			path = 01_Basic;
@@ -194,6 +197,7 @@
 				917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */,
 				EE1A9ADE2FE3885100F5E16D /* DelayOption.swift in Sources */,
 				EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */,
+				EE1A9AE02FE38F4200F5E16D /* ColorPulseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
