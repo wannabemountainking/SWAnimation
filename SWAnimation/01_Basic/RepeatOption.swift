@@ -66,6 +66,33 @@ struct RepeatOption: View {
 				PurpleButton(title: animateStar ? "정지" : "실행") {
 					animateStar.toggle()
 				}
+<<<<<<< HEAD
+=======
+				
+				// MARK: - 예제 3. 무한반복 (Capsule, autoreverses: true)
+				TemplateView(
+					title: "3. 무한반복 (Capsule, Auto-Reverse)",
+					descriptionText: "캡슐의 양쪽으로 이동하면서 자동 반전되는 것을 반복합니다",
+					content: {
+						Capsule()
+							.fill(Color.ppurple1)
+							.frame(width: 150, height: 50)
+							.offset(x: animateCapsule ? 200 : 0, y: 0) // 좌우로 이동하는 효과
+							.animation(
+								animateCapsule
+								? Animation
+									.easeInOut(duration: 2)
+									.repeatForever(autoreverses: true)
+								: .default,
+								value: animateCapsule
+							)
+					}
+				)
+				
+				PurpleButton(title: animateCapsule ? "정지" : "실행") {
+					animateCapsule.toggle()
+				}
+>>>>>>> a249795 (repeat again)
 			} //:VSTACK
 		} //:SCROLL
     }
