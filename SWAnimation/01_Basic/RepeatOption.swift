@@ -66,8 +66,6 @@ struct RepeatOption: View {
 				PurpleButton(title: animateStar ? "정지" : "실행") {
 					animateStar.toggle()
 				}
-<<<<<<< HEAD
-=======
 				
 				// MARK: - 예제 3. 무한반복 (Capsule, autoreverses: true)
 				TemplateView(
@@ -92,7 +90,6 @@ struct RepeatOption: View {
 				PurpleButton(title: animateCapsule ? "정지" : "실행") {
 					animateCapsule.toggle()
 				}
->>>>>>> a249795 (repeat again)
 			} //:VSTACK
 		} //:SCROLL
     }

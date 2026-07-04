@@ -18,9 +18,11 @@
 		EE7DBAD12FE232AD0092EB69 /* TrimAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */; };
 		EE88C9822FDFA5660006FFC0 /* LocationAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */; };
 		EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */; };
+		EE9A44412FF925A1008B522C /* LandingAnimation1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9A44402FF925A1008B522C /* LandingAnimation1.swift */; };
 		EE9DA0B82FDBFB6E00A2C50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */; };
 		EE9DA0B92FDBFB6E00A2C50E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */; };
 		EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */; };
+		EEA6794A2FF9085E0002E66F /* PlusShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA679492FF9085E0002E66F /* PlusShape.swift */; };
 		EEAB4B722FDEA5B900C4145B /* Intro1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB4B712FDEA5B900C4145B /* Intro1.swift */; };
 		EEBA207E2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBA207D2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift */; };
 		EED2C2402FDCED2E00345AEB /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2C23F2FDCED2E00345AEB /* PurpleButton.swift */; };
@@ -38,10 +40,12 @@
 		EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimAnimate.swift; sourceTree = "<group>"; };
 		EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnimate.swift; sourceTree = "<group>"; };
 		EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curves1.swift; sourceTree = "<group>"; };
+		EE9A44402FF925A1008B522C /* LandingAnimation1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingAnimation1.swift; sourceTree = "<group>"; };
 		EE9DA0A62FDBFB3D00A2C50E /* SWAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAnimationApp.swift; sourceTree = "<group>"; };
+		EEA679492FF9085E0002E66F /* PlusShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusShape.swift; sourceTree = "<group>"; };
 		EEAB4B712FDEA5B900C4145B /* Intro1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro1.swift; sourceTree = "<group>"; };
 		EEBA207D2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationEffectAnimate.swift; sourceTree = "<group>"; };
 		EED2C23F2FDCED2E00345AEB /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
@@ -88,11 +92,21 @@
 		EE9DA0B72FDBFB6E00A2C50E /* SWAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				EEA679482FF908300002E66F /* 01_Practice */,
 				EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */,
 				EEAB4B702FDEA59D00C4145B /* 01_Basic */,
 				917F94D82FDC5C6A00B00A91 /* 00_ APP */,
 			);
 			path = SWAnimation;
+			sourceTree = "<group>";
+		};
+		EEA679482FF908300002E66F /* 01_Practice */ = {
+			isa = PBXGroup;
+			children = (
+				EEA679492FF9085E0002E66F /* PlusShape.swift */,
+				EE9A44402FF925A1008B522C /* LandingAnimation1.swift */,
+			);
+			path = 01_Practice;
 			sourceTree = "<group>";
 		};
 		EEAB4B702FDEA59D00C4145B /* 01_Basic */ = {
@@ -144,7 +158,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2650;
-				LastUpgradeCheck = 2650;
+				LastUpgradeCheck = 2660;
 				TargetAttributes = {
 					EE9DA0A52FDBFB3D00A2C50E = {
 						CreatedOnToolsVersion = 26.5;
@@ -188,11 +202,13 @@
 			files = (
 				EE88C9822FDFA5660006FFC0 /* LocationAnimate.swift in Sources */,
 				EE9DA0B92FDBFB6E00A2C50E /* ContentView.swift in Sources */,
+				EE9A44412FF925A1008B522C /* LandingAnimation1.swift in Sources */,
 				EEBA207E2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift in Sources */,
 				EE7DBAD12FE232AD0092EB69 /* TrimAnimate.swift in Sources */,
 				EED2C2402FDCED2E00345AEB /* PurpleButton.swift in Sources */,
 				EE389AB62FE13C68006F8252 /* TextColorsizeAnimationView.swift in Sources */,
 				EE1A9ADC2FE3822B00F5E16D /* DurationOption.swift in Sources */,
+				EEA6794A2FF9085E0002E66F /* PlusShape.swift in Sources */,
 				EE253DF42FE4D24600B6C298 /* RepeatOption.swift in Sources */,
 				EE389AB82FE13F9A006F8252 /* TextAnimate.swift in Sources */,
 				EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */,
@@ -267,6 +283,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -324,6 +341,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
