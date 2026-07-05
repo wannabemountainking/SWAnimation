@@ -15,6 +15,7 @@
 		EE253DF42FE4D24600B6C298 /* RepeatOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE253DF32FE4D24600B6C298 /* RepeatOption.swift */; };
 		EE389AB62FE13C68006F8252 /* TextColorsizeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE389AB52FE13C68006F8252 /* TextColorsizeAnimationView.swift */; };
 		EE389AB82FE13F9A006F8252 /* TextAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE389AB72FE13F9A006F8252 /* TextAnimate.swift */; };
+		EE7480362FFA9160000BB197 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7480352FFA9160000BB197 /* SkeletonView.swift */; };
 		EE7DBAD12FE232AD0092EB69 /* TrimAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */; };
 		EE88C9822FDFA5660006FFC0 /* LocationAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */; };
 		EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */; };
@@ -37,6 +38,7 @@
 		EE253DF32FE4D24600B6C298 /* RepeatOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatOption.swift; sourceTree = "<group>"; };
 		EE389AB52FE13C68006F8252 /* TextColorsizeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColorsizeAnimationView.swift; sourceTree = "<group>"; };
 		EE389AB72FE13F9A006F8252 /* TextAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnimate.swift; sourceTree = "<group>"; };
+		EE7480352FFA9160000BB197 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
 		EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimAnimate.swift; sourceTree = "<group>"; };
 		EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnimate.swift; sourceTree = "<group>"; };
 		EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curves1.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			path = "00_ APP";
 			sourceTree = "<group>";
 		};
+		EE7480342FFA9139000BB197 /* Skeleton */ = {
+			isa = PBXGroup;
+			children = (
+				EE7480352FFA9160000BB197 /* SkeletonView.swift */,
+			);
+			path = Skeleton;
+			sourceTree = "<group>";
+		};
 		EE9DA09D2FDBFB3D00A2C50E = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 			children = (
 				EEA679492FF9085E0002E66F /* PlusShape.swift */,
 				EE9A44402FF925A1008B522C /* LandingAnimation1.swift */,
+				EE7480342FFA9139000BB197 /* Skeleton */,
 			);
 			path = 01_Practice;
 			sourceTree = "<group>";
@@ -204,6 +215,7 @@
 				EE9DA0B92FDBFB6E00A2C50E /* ContentView.swift in Sources */,
 				EE9A44412FF925A1008B522C /* LandingAnimation1.swift in Sources */,
 				EEBA207E2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift in Sources */,
+				EE7480362FFA9160000BB197 /* SkeletonView.swift in Sources */,
 				EE7DBAD12FE232AD0092EB69 /* TrimAnimate.swift in Sources */,
 				EED2C2402FDCED2E00345AEB /* PurpleButton.swift in Sources */,
 				EE389AB62FE13C68006F8252 /* TextColorsizeAnimationView.swift in Sources */,
