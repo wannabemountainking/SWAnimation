@@ -23,6 +23,7 @@
 		EE9DA0B82FDBFB6E00A2C50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */; };
 		EE9DA0B92FDBFB6E00A2C50E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */; };
 		EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */; };
+		EE9E8A622FFB3F4600089A7B /* SkeletonDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E8A612FFB3F4600089A7B /* SkeletonDemo.swift */; };
 		EEA6794A2FF9085E0002E66F /* PlusShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA679492FF9085E0002E66F /* PlusShape.swift */; };
 		EEAB4B722FDEA5B900C4145B /* Intro1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB4B712FDEA5B900C4145B /* Intro1.swift */; };
 		EEBA207E2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBA207D2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift */; };
@@ -47,6 +48,7 @@
 		EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EE9DA0B62FDBFB6E00A2C50E /* SWAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAnimationApp.swift; sourceTree = "<group>"; };
+		EE9E8A612FFB3F4600089A7B /* SkeletonDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonDemo.swift; sourceTree = "<group>"; };
 		EEA679492FF9085E0002E66F /* PlusShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusShape.swift; sourceTree = "<group>"; };
 		EEAB4B712FDEA5B900C4145B /* Intro1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro1.swift; sourceTree = "<group>"; };
 		EEBA207D2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationEffectAnimate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				EE7480352FFA9160000BB197 /* SkeletonView.swift */,
+				EE9E8A612FFB3F4600089A7B /* SkeletonDemo.swift */,
 			);
 			path = Skeleton;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				EE1A9ADC2FE3822B00F5E16D /* DurationOption.swift in Sources */,
 				EEA6794A2FF9085E0002E66F /* PlusShape.swift in Sources */,
 				EE253DF42FE4D24600B6C298 /* RepeatOption.swift in Sources */,
+				EE9E8A622FFB3F4600089A7B /* SkeletonDemo.swift in Sources */,
 				EE389AB82FE13F9A006F8252 /* TextAnimate.swift in Sources */,
 				EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */,
 				EEAB4B722FDEA5B900C4145B /* Intro1.swift in Sources */,
