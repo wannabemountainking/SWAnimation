@@ -60,7 +60,7 @@ struct PlusShape: View {
 			.fill(Color.accent)
 			.frame(width: 100, height: 100)
 			.offset(x: x, y: y) // 위치 이동
-			.opacity(change ? 1 : 0)  // 등장 시 Fade-in
+//			.opacity(change ? 1 : 0)  // 등장 시 Fade-in
 	}
 }
 

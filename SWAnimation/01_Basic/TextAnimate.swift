@@ -92,6 +92,8 @@ struct TextAnimate: View {
                             }
 						} //:VSTACK
 						
+						Text("\(rotationAngle.formatted(.number.precision(.fractionLength(0))))°")
+						
 						Circle()
 							.trim(from: 0, to: change ? 1 : 0)
 							.stroke(Color.green, style: StrokeStyle(lineWidth: 5, lineCap: .round))
