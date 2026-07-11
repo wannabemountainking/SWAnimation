@@ -34,12 +34,15 @@ struct RotationEffectAnimate: View {
 							RoundedRectangle(cornerRadius: 20)
 								.frame(width: 300, height: 200)
 								.foregroundStyle(.accent)
+								.rotationEffect(Angle.degrees(change ? 180 : 0))
 								.overlay {
 									Text("\(change ? "180°" : "0°")")
 										.font(.largeTitle)
+										.frame(width: 100, height: 40)
 										.foregroundStyle(.white)
+										.contentTransition(.numericText())
 								}
-								.rotationEffect(Angle.degrees(change ? 180 : 0))
+//								.rotationEffect(Angle.degrees(change ? 180 : 0))
 								.animation(.easeInOut(duration: 1), value: change)
 						} //:VSTACK
 						
