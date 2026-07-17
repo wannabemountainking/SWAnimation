@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		916FFE052FDFEB0D003F9473 /* FrameOpcityAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916FFE042FDFEB0D003F9473 /* FrameOpcityAnimate.swift */; };
 		917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F94DC2FDC5CD400B00A91 /* TemplateView.swift */; };
+		9181F092300A8D6900DBFE61 /* SpringIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9181F091300A8D6900DBFE61 /* SpringIntro.swift */; };
 		EE1A9ADC2FE3822B00F5E16D /* DurationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A9ADB2FE3822B00F5E16D /* DurationOption.swift */; };
 		EE1A9ADE2FE3885100F5E16D /* DelayOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A9ADD2FE3885100F5E16D /* DelayOption.swift */; };
 		EE1A9AE02FE38F4200F5E16D /* ColorPulseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A9ADF2FE38F4200F5E16D /* ColorPulseView.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		916FFE042FDFEB0D003F9473 /* FrameOpcityAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameOpcityAnimate.swift; sourceTree = "<group>"; };
 		917F94DC2FDC5CD400B00A91 /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
+		9181F091300A8D6900DBFE61 /* SpringIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringIntro.swift; sourceTree = "<group>"; };
 		EE1A9ADB2FE3822B00F5E16D /* DurationOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationOption.swift; sourceTree = "<group>"; };
 		EE1A9ADD2FE3885100F5E16D /* DelayOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayOption.swift; sourceTree = "<group>"; };
 		EE1A9ADF2FE38F4200F5E16D /* ColorPulseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPulseView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 			path = "00_ APP";
 			sourceTree = "<group>";
 		};
+		9181F090300A8D0400DBFE61 /* 03_Spring */ = {
+			isa = PBXGroup;
+			children = (
+				9181F091300A8D6900DBFE61 /* SpringIntro.swift */,
+			);
+			path = 03_Spring;
+			sourceTree = "<group>";
+		};
 		EE7480342FFA9139000BB197 /* Skeleton */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		EE9DA0B72FDBFB6E00A2C50E /* SWAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				9181F090300A8D0400DBFE61 /* 03_Spring */,
 				EEA679482FF908300002E66F /* 01_Practice */,
 				EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */,
 				EEAB4B702FDEA59D00C4145B /* 01_Basic */,
@@ -226,6 +237,7 @@
 				EEA6794A2FF9085E0002E66F /* PlusShape.swift in Sources */,
 				EE253DF42FE4D24600B6C298 /* RepeatOption.swift in Sources */,
 				EE9E8A622FFB3F4600089A7B /* SkeletonDemo.swift in Sources */,
+				9181F092300A8D6900DBFE61 /* SpringIntro.swift in Sources */,
 				EE389AB82FE13F9A006F8252 /* TextAnimate.swift in Sources */,
 				EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */,
 				EEAB4B722FDEA5B900C4145B /* Intro1.swift in Sources */,
