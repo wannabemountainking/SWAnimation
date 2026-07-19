@@ -63,7 +63,32 @@ struct SpringIntro: View {
 					
 					// MARK: - 매개변수 (response, dampingFraction, blendDuration) 조절 슬라이더
 					VStack(spacing: 10) {
-						Text("<#Placeholder#>")
+						// 1. Response 슬라이더
+						SpringParameterSlider(
+							title: "Response (응답 속도)",
+							range: 0.1...2.0,
+							description: "낮을 수록 빠르게 반응합니다",
+							color: .accent,
+							value: $response
+						)
+						
+						// 2. Damping 슬라이더
+						SpringParameterSlider(
+							title: "Damping Fraction (댐핑비)",
+							range: 0.1...1.0,
+							description: "낮을 수록 더 많이 진동합니다",
+							color: .ppurple1,
+							value: $dampingFraction
+						)
+						
+						// 3. Blend 슬라이더
+						SpringParameterSlider(
+							title: "Blend Duration (블렌드 시간)",
+							range: 0.0...1.0,
+							description: "에니메이션 전환의 부드러움을 제어합니다",
+							color: .ppink,
+							value: $blendDuration
+						)
 						
 					} //:VSTACK
 					
@@ -112,10 +137,25 @@ struct SpringParameterSlider: View {
 					.padding(.vertical, 4)
 					.background(
 						// 값 표시 배경: 테마 칼라의 연한 버전
-						
+						RoundedRectangle(cornerRadius: 6)
+							.fill(color.opacity(0.1))
 					)
 			} //:HSTACK
+			// 중간 : 실제 슬라이더 컨트롤
+			Slider(value: $value, in: range)
+				.tint(color)
+			// 하단 : 슬라이더 기능 설명
+			Text(description)
+				.font(.caption)
+				.foregroundStyle(.gray)
 		} //:VSTACK
+		.padding()
+		.background( // 카드 스타일 배경
+			RoundedRectangle(cornerRadius: 12)
+				.fill(Color.white.opacity(0.8))
+				.shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
+		)
+		
 	}
 }
 

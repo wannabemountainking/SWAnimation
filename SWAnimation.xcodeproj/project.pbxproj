@@ -28,6 +28,8 @@
 		EEA6794A2FF9085E0002E66F /* PlusShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA679492FF9085E0002E66F /* PlusShape.swift */; };
 		EEAB4B722FDEA5B900C4145B /* Intro1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB4B712FDEA5B900C4145B /* Intro1.swift */; };
 		EEBA207E2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBA207D2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift */; };
+		EEBA37D9300D00D3009D295A /* InteractiveSpring1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBA37D8300D00D3009D295A /* InteractiveSpring1.swift */; };
+		EEBA37DB300D0D75009D295A /* InterpolatingSpring1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBA37DA300D0D75009D295A /* InterpolatingSpring1.swift */; };
 		EED2C2402FDCED2E00345AEB /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2C23F2FDCED2E00345AEB /* PurpleButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		EEA679492FF9085E0002E66F /* PlusShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusShape.swift; sourceTree = "<group>"; };
 		EEAB4B712FDEA5B900C4145B /* Intro1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro1.swift; sourceTree = "<group>"; };
 		EEBA207D2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationEffectAnimate.swift; sourceTree = "<group>"; };
+		EEBA37D8300D00D3009D295A /* InteractiveSpring1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveSpring1.swift; sourceTree = "<group>"; };
+		EEBA37DA300D0D75009D295A /* InterpolatingSpring1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolatingSpring1.swift; sourceTree = "<group>"; };
 		EED2C23F2FDCED2E00345AEB /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				9181F091300A8D6900DBFE61 /* SpringIntro.swift */,
+				EEBA37D8300D00D3009D295A /* InteractiveSpring1.swift */,
+				EEBA37DA300D0D75009D295A /* InterpolatingSpring1.swift */,
 			);
 			path = 03_Spring;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 				EE7480362FFA9160000BB197 /* SkeletonView.swift in Sources */,
 				EE7DBAD12FE232AD0092EB69 /* TrimAnimate.swift in Sources */,
 				EED2C2402FDCED2E00345AEB /* PurpleButton.swift in Sources */,
+				EEBA37DB300D0D75009D295A /* InterpolatingSpring1.swift in Sources */,
 				EE389AB62FE13C68006F8252 /* TextColorsizeAnimationView.swift in Sources */,
 				EE1A9ADC2FE3822B00F5E16D /* DurationOption.swift in Sources */,
 				EEA6794A2FF9085E0002E66F /* PlusShape.swift in Sources */,
@@ -244,6 +251,7 @@
 				916FFE052FDFEB0D003F9473 /* FrameOpcityAnimate.swift in Sources */,
 				917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */,
 				EE1A9ADE2FE3885100F5E16D /* DelayOption.swift in Sources */,
+				EEBA37D9300D00D3009D295A /* InteractiveSpring1.swift in Sources */,
 				EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */,
 				EE1A9AE02FE38F4200F5E16D /* ColorPulseView.swift in Sources */,
 			);
