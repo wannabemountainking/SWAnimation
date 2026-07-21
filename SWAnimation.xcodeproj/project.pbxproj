@@ -20,6 +20,7 @@
 		EE7DBAD12FE232AD0092EB69 /* TrimAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */; };
 		EE88C9822FDFA5660006FFC0 /* LocationAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */; };
 		EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */; };
+		EE8EA9F4300F0B90006811AA /* InterpolatingSpring2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8EA9F3300F0B90006811AA /* InterpolatingSpring2.swift */; };
 		EE9A44412FF925A1008B522C /* LandingAnimation1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9A44402FF925A1008B522C /* LandingAnimation1.swift */; };
 		EE9DA0B82FDBFB6E00A2C50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */; };
 		EE9DA0B92FDBFB6E00A2C50E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DA0B52FDBFB6E00A2C50E /* ContentView.swift */; };
@@ -47,6 +48,7 @@
 		EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimAnimate.swift; sourceTree = "<group>"; };
 		EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnimate.swift; sourceTree = "<group>"; };
 		EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curves1.swift; sourceTree = "<group>"; };
+		EE8EA9F3300F0B90006811AA /* InterpolatingSpring2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolatingSpring2.swift; sourceTree = "<group>"; };
 		EE9A44402FF925A1008B522C /* LandingAnimation1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingAnimation1.swift; sourceTree = "<group>"; };
 		EE9DA0A62FDBFB3D00A2C50E /* SWAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				9181F091300A8D6900DBFE61 /* SpringIntro.swift */,
 				EEBA37D8300D00D3009D295A /* InteractiveSpring1.swift */,
 				EEBA37DA300D0D75009D295A /* InterpolatingSpring1.swift */,
+				EE8EA9F3300F0B90006811AA /* InterpolatingSpring2.swift */,
 			);
 			path = 03_Spring;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */,
 				EEAB4B722FDEA5B900C4145B /* Intro1.swift in Sources */,
 				916FFE052FDFEB0D003F9473 /* FrameOpcityAnimate.swift in Sources */,
+				EE8EA9F4300F0B90006811AA /* InterpolatingSpring2.swift in Sources */,
 				917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */,
 				EE1A9ADE2FE3885100F5E16D /* DelayOption.swift in Sources */,
 				EEBA37D9300D00D3009D295A /* InteractiveSpring1.swift in Sources */,
