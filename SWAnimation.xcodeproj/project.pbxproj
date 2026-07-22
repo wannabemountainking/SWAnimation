@@ -17,6 +17,7 @@
 		EE389AB62FE13C68006F8252 /* TextColorsizeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE389AB52FE13C68006F8252 /* TextColorsizeAnimationView.swift */; };
 		EE389AB82FE13F9A006F8252 /* TextAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE389AB72FE13F9A006F8252 /* TextAnimate.swift */; };
 		EE7480362FFA9160000BB197 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7480352FFA9160000BB197 /* SkeletonView.swift */; };
+		EE7C32943010474F007BC55D /* SpringOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C32933010474F007BC55D /* SpringOnboarding.swift */; };
 		EE7DBAD12FE232AD0092EB69 /* TrimAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */; };
 		EE88C9822FDFA5660006FFC0 /* LocationAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */; };
 		EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */; };
@@ -45,6 +46,7 @@
 		EE389AB52FE13C68006F8252 /* TextColorsizeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColorsizeAnimationView.swift; sourceTree = "<group>"; };
 		EE389AB72FE13F9A006F8252 /* TextAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnimate.swift; sourceTree = "<group>"; };
 		EE7480352FFA9160000BB197 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
+		EE7C32933010474F007BC55D /* SpringOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringOnboarding.swift; sourceTree = "<group>"; };
 		EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimAnimate.swift; sourceTree = "<group>"; };
 		EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnimate.swift; sourceTree = "<group>"; };
 		EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curves1.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				EEA679492FF9085E0002E66F /* PlusShape.swift */,
 				EE9A44402FF925A1008B522C /* LandingAnimation1.swift */,
 				EE7480342FFA9139000BB197 /* Skeleton */,
+				EE7C32933010474F007BC55D /* SpringOnboarding.swift */,
 			);
 			path = 01_Practice;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				EEBA37D9300D00D3009D295A /* InteractiveSpring1.swift in Sources */,
 				EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */,
 				EE1A9AE02FE38F4200F5E16D /* ColorPulseView.swift in Sources */,
+				EE7C32943010474F007BC55D /* SpringOnboarding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
