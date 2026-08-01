@@ -110,14 +110,24 @@ struct ElasticMenuView: View {
 	// MARK: - 메뉴 아이템 리스트
 	/// 메뉴 아이템들을 세로로 나열하는 컨테이너
 	private var menuItemList: some View {
-		Text("메뉴 아이템 리스트")
+		VStack(spacing: 20) {
+			Spacer()
+				.frame(height: 100) // 상단 여백 (햄버거 버튼과 겹치지 않게)
+			
+			// 반복문을 통한 동적 메뉴 생성
+			ForEach(Array(menuItems.enumerated()), id: \.element.id) { index, item in
+				MenuItemRow(item: item, index: index, isVisible: showMenuItems)
+			}
+			
+			Spacer()
+		} //:VSTACK
 	}
 	
 	// MARK: - 햄버거 버튼
 	private var hamburgerButton: some View {
 		Button {
 			//action
-			isMenuOpen.toggle()
+			toggleMenu()
 		} label: {
 			ZStack {
 				// Background Color
@@ -145,7 +155,29 @@ struct ElasticMenuView: View {
 	}
 	
 	// MARK: - 토글 함수
-	
+	/// 메뉴 열기 / 닫기를 제어하는 핵심 함수
+	private func toggleMenu() {
+		// 메뉴 닫기 순서
+		if isMenuOpen {
+			// 1. 메뉴 아이템들이 먼저 사라지게 함 (즉시 실행)
+			withAnimation(.spring) {
+				showMenuItems = false // 아이템들 숨김
+			}
+			// 2. 배경을 축소하고 메뉴를 닫음 (0.2 초 지연)
+			withAnimation(.spring.delay(0.2)) {
+				isMenuOpen = false // 메뉴 상태 닫힘으로 변경
+			}
+		} else {
+			// 1. 배경을 먼저 확장 (즉시 실행)
+			withAnimation(.spring) {
+				isMenuOpen = true // 메뉴 상태 열림으로 변경 -> 배경 확장 트리거
+			}
+			// 2. 메뉴 아이템들을 등장시킴 (0.2 초 지연)
+			withAnimation(.spring.delay(0.2)) {
+				showMenuItems = true // 아이템들 나타남 -> 순차적 등장 트리거
+			}
+		}
+	}
 }
 
 // MARK: - 개별 메뉴 아이템 뷰
@@ -209,7 +241,7 @@ struct MenuItemRow: View {
 		.opacity(hasAppeared ? 1.0 : 0.0) // 투명에서 불투명으로
 		.animation(
 			.interpolatingSpring(stiffness: 100, damping: 10)
-			.delay(Double(index) + 0.3), // 인덱스 기반 순차적으로 등장(0.3초 씩 지연)
+			.delay(Double(index) * 0.3), // 인덱스 기반 순차적으로 등장(0.3초 씩 지연)
 			value: hasAppeared
 		)
 		.animation(

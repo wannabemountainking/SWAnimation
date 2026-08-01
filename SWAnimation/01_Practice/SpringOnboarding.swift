@@ -84,9 +84,7 @@ struct SpringOnboarding: View {
 					// HStack 에 모든 페이지를 수평으로 나란히 배치
 					HStack(spacing: 0) {
 						// 반복문으로 배열 기반 UI 생성
-						ForEach(Array(pages.enumerated()), id: \.element.id) {
-							index,
-							page in
+						ForEach(Array(pages.enumerated()), id: \.element.id) { index, page in
 							// 각 개별 페이지 UI 구성 요소
 							VStack(spacing: 40) {
 								// 대형 아이콘
@@ -215,8 +213,6 @@ struct SpringOnboarding: View {
 			}
 		} //:VSTACK
 	}
-	
-	
 }
 
 #Preview {
