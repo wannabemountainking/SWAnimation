@@ -18,8 +18,10 @@
 		EE389AB82FE13F9A006F8252 /* TextAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE389AB72FE13F9A006F8252 /* TextAnimate.swift */; };
 		EE7480362FFA9160000BB197 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7480352FFA9160000BB197 /* SkeletonView.swift */; };
 		EE7C32943010474F007BC55D /* SpringOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C32933010474F007BC55D /* SpringOnboarding.swift */; };
+		EE7CF16B301F6AF5007095EB /* TransitionCombined.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF16A301F6AF5007095EB /* TransitionCombined.swift */; };
 		EE7DBAD12FE232AD0092EB69 /* TrimAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */; };
 		EE88C9822FDFA5660006FFC0 /* LocationAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */; };
+		EE8DA991301F509400544EB7 /* TransitionIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DA990301F509400544EB7 /* TransitionIntro.swift */; };
 		EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */; };
 		EE8EA9F4300F0B90006811AA /* InterpolatingSpring2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8EA9F3300F0B90006811AA /* InterpolatingSpring2.swift */; };
 		EE9A44412FF925A1008B522C /* LandingAnimation1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9A44402FF925A1008B522C /* LandingAnimation1.swift */; };
@@ -48,8 +50,10 @@
 		EE389AB72FE13F9A006F8252 /* TextAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnimate.swift; sourceTree = "<group>"; };
 		EE7480352FFA9160000BB197 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
 		EE7C32933010474F007BC55D /* SpringOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringOnboarding.swift; sourceTree = "<group>"; };
+		EE7CF16A301F6AF5007095EB /* TransitionCombined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCombined.swift; sourceTree = "<group>"; };
 		EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimAnimate.swift; sourceTree = "<group>"; };
 		EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnimate.swift; sourceTree = "<group>"; };
+		EE8DA990301F509400544EB7 /* TransitionIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionIntro.swift; sourceTree = "<group>"; };
 		EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curves1.swift; sourceTree = "<group>"; };
 		EE8EA9F3300F0B90006811AA /* InterpolatingSpring2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolatingSpring2.swift; sourceTree = "<group>"; };
 		EE9A44402FF925A1008B522C /* LandingAnimation1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingAnimation1.swift; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 			path = Skeleton;
 			sourceTree = "<group>";
 		};
+		EE8DA98F301F507E00544EB7 /* 04_Transition */ = {
+			isa = PBXGroup;
+			children = (
+				EE8DA990301F509400544EB7 /* TransitionIntro.swift */,
+				EE7CF16A301F6AF5007095EB /* TransitionCombined.swift */,
+			);
+			path = 04_Transition;
+			sourceTree = "<group>";
+		};
 		EE9DA09D2FDBFB3D00A2C50E = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +141,7 @@
 		EE9DA0B72FDBFB6E00A2C50E /* SWAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				EE8DA98F301F507E00544EB7 /* 04_Transition */,
 				9181F090300A8D0400DBFE61 /* 03_Spring */,
 				EEA679482FF908300002E66F /* 01_Practice */,
 				EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */,
@@ -247,6 +261,7 @@
 				EE7480362FFA9160000BB197 /* SkeletonView.swift in Sources */,
 				EE7DBAD12FE232AD0092EB69 /* TrimAnimate.swift in Sources */,
 				EED2C2402FDCED2E00345AEB /* PurpleButton.swift in Sources */,
+				EE7CF16B301F6AF5007095EB /* TransitionCombined.swift in Sources */,
 				EEBA37DB300D0D75009D295A /* InterpolatingSpring1.swift in Sources */,
 				EE389AB62FE13C68006F8252 /* TextColorsizeAnimationView.swift in Sources */,
 				EE1A9ADC2FE3822B00F5E16D /* DurationOption.swift in Sources */,
@@ -263,6 +278,7 @@
 				EE1A9ADE2FE3885100F5E16D /* DelayOption.swift in Sources */,
 				EE9B7AA03010715700E71155 /* ElasticMenuView.swift in Sources */,
 				EEBA37D9300D00D3009D295A /* InteractiveSpring1.swift in Sources */,
+				EE8DA991301F509400544EB7 /* TransitionIntro.swift in Sources */,
 				EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */,
 				EE1A9AE02FE38F4200F5E16D /* ColorPulseView.swift in Sources */,
 				EE7C32943010474F007BC55D /* SpringOnboarding.swift in Sources */,
