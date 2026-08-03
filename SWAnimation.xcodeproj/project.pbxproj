@@ -32,6 +32,7 @@
 		EE9E8A622FFB3F4600089A7B /* SkeletonDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E8A612FFB3F4600089A7B /* SkeletonDemo.swift */; };
 		EEA6794A2FF9085E0002E66F /* PlusShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA679492FF9085E0002E66F /* PlusShape.swift */; };
 		EEAB4B722FDEA5B900C4145B /* Intro1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB4B712FDEA5B900C4145B /* Intro1.swift */; };
+		EEB5B4813020346E00FA96C4 /* AsymmetricTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB5B4803020346E00FA96C4 /* AsymmetricTransition.swift */; };
 		EEBA207E2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBA207D2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift */; };
 		EEBA37D9300D00D3009D295A /* InteractiveSpring1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBA37D8300D00D3009D295A /* InteractiveSpring1.swift */; };
 		EEBA37DB300D0D75009D295A /* InterpolatingSpring1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBA37DA300D0D75009D295A /* InterpolatingSpring1.swift */; };
@@ -65,6 +66,7 @@
 		EE9E8A612FFB3F4600089A7B /* SkeletonDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonDemo.swift; sourceTree = "<group>"; };
 		EEA679492FF9085E0002E66F /* PlusShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusShape.swift; sourceTree = "<group>"; };
 		EEAB4B712FDEA5B900C4145B /* Intro1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro1.swift; sourceTree = "<group>"; };
+		EEB5B4803020346E00FA96C4 /* AsymmetricTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsymmetricTransition.swift; sourceTree = "<group>"; };
 		EEBA207D2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationEffectAnimate.swift; sourceTree = "<group>"; };
 		EEBA37D8300D00D3009D295A /* InteractiveSpring1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveSpring1.swift; sourceTree = "<group>"; };
 		EEBA37DA300D0D75009D295A /* InterpolatingSpring1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolatingSpring1.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				EE8DA990301F509400544EB7 /* TransitionIntro.swift */,
 				EE7CF16A301F6AF5007095EB /* TransitionCombined.swift */,
+				EEB5B4803020346E00FA96C4 /* AsymmetricTransition.swift */,
 			);
 			path = 04_Transition;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */,
 				EEAB4B722FDEA5B900C4145B /* Intro1.swift in Sources */,
 				916FFE052FDFEB0D003F9473 /* FrameOpcityAnimate.swift in Sources */,
+				EEB5B4813020346E00FA96C4 /* AsymmetricTransition.swift in Sources */,
 				EE8EA9F4300F0B90006811AA /* InterpolatingSpring2.swift in Sources */,
 				917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */,
 				EE1A9ADE2FE3885100F5E16D /* DelayOption.swift in Sources */,
