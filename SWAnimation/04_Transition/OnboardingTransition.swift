@@ -44,7 +44,7 @@ class OnboardingTransitionManager {
     var isCompleted: Bool = false
     
     /// 사용자가 앞으로 이동 중인지 뒤로 이동 중인지를 추적
-    var isMovingForward: Bool = false
+    var isMovingForward: Bool = true
     
     // MARK: - 온보딩 단계 데이터
 	/// 모든 온보딩 단계의 데이터를 담은 배열 (Mock Data)
@@ -129,6 +129,26 @@ class OnboardingTransitionManager {
         isMovingForward = false
         if currentStep > 1 { // 현재 페이지가 1페이지가 아닐 경우
             currentStep -= 1 // 1씩 감소
+        }
+    }
+    /// 온보딩을 처음부터 다시 시작하는 함수
+    func resetOnboarding() {
+        currentStep = 1
+        isCompleted = false
+        isMovingForward = true
+    }
+    /// 방향 전환 함수
+    func getTransition(isForward: Bool) -> AnyTransition {
+        if isForward {  // 앞으로 이동
+            return .asymmetric(  // 오른쪽에서 등장 -> 왼쪽으로 퇴장
+                insertion: .move(edge: .trailing).combined(with: .opacity),
+                removal: .move(edge: .leading).combined(with: .opacity)
+            )
+        } else { // 뒤로 이동
+            return .asymmetric( // 왼쪽에서 등장 -> 오른쪽으로 퇴장
+                insertion: .move(edge: .leading).combined(with: .opacity),
+                removal: .move(edge: .trailing).combined(with: .opacity)
+            )
         }
     }
 }
@@ -221,16 +241,21 @@ struct OnboardingTransition: View {
 	private var stepContent: some View {
 		Group {
 			// 조건뷰 페이지 랜더링 : SwiftUI가 View ID를 추적해서 animation 적용
-//			if manager.currentStep == 1 {
-//				OnboardingStepView(step: manager.onboardingSteps[0])
-//			} else if manager.currentStep == 2 {
-//				OnboardingStepView(step: manager.onboardingSteps[1])
-//			} else if manager.currentStep == 3 {
-//				OnboardingStepView(step: manager.onboardingSteps[2])
-//			} else if manager.currentStep == 4 {
-//				OnboardingStepView(step: manager.onboardingSteps[3])
-//			}
-			OnboardingStepView(step: manager.onboardingSteps[manager.currentStep - 1])
+			if manager.currentStep == 1 {
+				OnboardingStepView(step: manager.onboardingSteps[0])
+                    .transition(manager.getTransition(isForward: manager.isMovingForward))
+			} else if manager.currentStep == 2 {
+				OnboardingStepView(step: manager.onboardingSteps[1])
+                    .transition(manager.getTransition(isForward: manager.isMovingForward))
+			} else if manager.currentStep == 3 {
+				OnboardingStepView(step: manager.onboardingSteps[2])
+                    .transition(manager.getTransition(isForward: manager.isMovingForward))
+			} else if manager.currentStep == 4 {
+				OnboardingStepView(step: manager.onboardingSteps[3])
+                    .transition(manager.getTransition(isForward: manager.isMovingForward))
+			}
+//			OnboardingStepView(step: manager.onboardingSteps[manager.currentStep - 1])
+                
 		}
 	}
 	
@@ -281,7 +306,7 @@ struct OnboardingTransition: View {
                         // action
                         
                     } label: {
-                        Text("")
+                        Text("이전")
                             .foregroundStyle(.clear)
                     }
                 }
@@ -319,7 +344,7 @@ struct OnboardingTransition: View {
                         // action
                         
                     } label: {
-                        Text("")
+                        Text("이전")
                             .foregroundStyle(.clear)
                     }
                 }
@@ -332,7 +357,41 @@ struct OnboardingTransition: View {
 	// MARK: - 완료 화면
 	/// 온보딩 완료 후 표시되는 성공 화면
 	private var completionView: some View {
-		Text("완료 화면")
+        VStack(spacing: 30) {
+            Spacer()
+            
+            // 완료 아이콘
+            Image(systemName: "checkmark.circle.fill")
+                .font(.system(size: 80))
+                .foregroundStyle(.ppink)
+            
+            // 완료 메시지
+            VStack(spacing: 15) {
+                Text("온보딩 완료!")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.white)
+                Text("모든 설정이 완료되었습니다\n이제 앱을 사용할 준비가 되었어요")
+                    .font(.body)
+                    .foregroundStyle(.gray)
+                    .multilineTextAlignment(.center)
+            } //:VSTACK
+            Spacer()
+            
+            // 다시 시작 버튼 (데모용)
+            PurpleButton(
+                title: "다시 시작",
+                action: {
+                    withAnimation(.spring) {
+                        manager.resetOnboarding()
+                    }
+                }
+            )
+            .padding(.horizontal, 25)
+            .padding(.bottom, 50)
+        } //:VSTACK
+        // 완료 화면 등장 시 scale + Opacity transition
+        .transition(.scale.combined(with: .opacity))
 	}
 }
 
