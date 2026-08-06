@@ -124,7 +124,13 @@ class OnboardingTransitionManager {
 		}
 	}
 	/// 이전 단계로 이동하는 함수
-	func goToPreviousStep()
+    func goToPreviousStep() {
+        // 이동방향 설정
+        isMovingForward = false
+        if currentStep > 1 { // 현재 페이지가 1페이지가 아닐 경우
+            currentStep -= 1 // 1씩 감소
+        }
+    }
 }
 
 // MARK: - 메인 온보딩 뷰
@@ -259,20 +265,40 @@ struct OnboardingTransition: View {
 			// 보조 네비게이션과 인디케이터
 			HStack(spacing: 10) {
 				// 1. 이전 버튼
-				if !manager.currentStepData.isFirstStep {
-					Button {
-						// action
-						withAnimation(.spring) {
-							manager.goToPreviousStep()
-						}
-					} label: {
-						Text("이전")
-							.foregroundStyle(.gray)
-					}
-
-				}
+                if !manager.currentStepData.isFirstStep {
+                    Button {
+                        // action
+                        withAnimation(.spring) {
+                            manager.goToPreviousStep()
+                        }
+                    } label: {
+                        Text("이전")
+                            .foregroundStyle(.gray)
+                    }
+                } else {
+                    Button {
+                        // action
+                        
+                    } label: {
+                        Text("")
+                            .foregroundStyle(.clear)
+                    }
+                }
+                Spacer()
 				// 2. 단계 인디케이터 점들
-				
+                HStack(spacing: 10) {
+                    ForEach(1...manager.totalSteps, id: \.self) { step in
+                        Circle()
+                            .fill(
+                                step == manager.currentStep
+                                ? manager.currentStepData.accentColor
+                                : Color.gray.opacity(0.5)
+                            )
+                            .frame(width: 10, height: 10)
+                            .scaleEffect(step == manager.currentStep ? 1.5 : 1.0)
+                            .animation(.easeInOut(duration: 0.3), value: manager.currentStep)
+                    }
+                } //:HSTACK
 				// 3. 다음 버틑 (마지막 단계가 아닐 때만)
 				
 			} //:HSTACK
