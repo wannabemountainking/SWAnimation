@@ -276,6 +276,7 @@ struct OnboardingTransition: View {
                             .foregroundStyle(.gray)
                     }
                 } else {
+                    // 투명한 더미 버튼으로 레이아웃 균형 유지
                     Button {
                         // action
                         
@@ -299,10 +300,30 @@ struct OnboardingTransition: View {
                             .animation(.easeInOut(duration: 0.3), value: manager.currentStep)
                     }
                 } //:HSTACK
+                Spacer()
+                
 				// 3. 다음 버틑 (마지막 단계가 아닐 때만)
-				
+                if !manager.currentStepData.isLastStep {
+                    Button {
+                        // action
+                        withAnimation(.spring) {
+                            manager.goToNextStep()
+                        }
+                    } label: {
+                        Text("다음")
+                            .foregroundStyle(.gray)
+                    }
+                } else {
+                    // 투명한 더미 버튼으로 레이아웃 균형 유지
+                    Button {
+                        // action
+                        
+                    } label: {
+                        Text("")
+                            .foregroundStyle(.clear)
+                    }
+                }
 			} //:HSTACK
-			
 		} //:VSTACK
 		.padding(.horizontal, 25)
 		.padding(.bottom, 40)
