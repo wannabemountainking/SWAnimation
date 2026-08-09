@@ -10,7 +10,7 @@ import Observation
 
 // MARK: - 토스트 데이터 모델
 /// 각 토스트 알림 정보를 담은 구조체
-struct ToastModel: Identifiable, Equatable {
+struct ToastModel: Identifiable, Equatable, Hashable {
 	// properties
 	let id = UUID() // 각 토스트 인스턴스를 구분하는 ID 값
 	let type: ToastType // 토스트 종류 (성공, 에러, 정보)
@@ -108,6 +108,71 @@ final class ToastManager {
 	private let maxToasts: Int = 3
 	
 	// MARK: - Methods
+	/// 새로운 토스트를 화면에 표시하는 메인 함수
+	func showToast(
+		type: ToastModel.ToastType,
+		title: String,
+		message: String? = nil,
+		duration: TimeInterval? = nil
+	) {
+		// 1. 새로운 토스트 인스턴스 생성
+		let toast = ToastModel(
+			type: type,
+			title: title,
+			message: message,
+			duration: duration ?? type.defaultDuration
+		)
+		// 2. 최대 개수 제한 로직
+		// 최대 개수가 같거나 넘어갈 경우(배열이 넘치면) 기존에 가장 먼저 만든 토스트 메시지를 수동으로 제거
+		if activeToasts.count >= maxToasts {
+			if let oldestToast = activeToasts.first {
+				dismissToast(oldestToast)
+			}
+		}
+		// 3. 새 토스트를 배열에 추가
+		withAnimation(.spring) {
+			activeToasts.append(toast)
+		}
+		
+		// 4. 토스트 자동 사라짐 타이머 설정(타이머 생성)
+		let timer = Timer.scheduledTimer(withTimeInterval: toast.duration, repeats: false) { _ in
+			// UI 업데이트이므로 반드시 메인쓰레드에서 !!
+			DispatchQueue.main.async {
+				self.dismissToast(toast)
+			}
+		}
+		
+		// 5. 생성된 타이머를 딕셔너리에 저장 (나중에 수동 해제를 위해)
+		timers[toast.id] = timer
+	}
+	
+	/// 특정 토스트를 수동으로 제거하는 함수
+	func dismissToast(_ toast: ToastModel) {
+		// 메모리 정리: 해당 토스트의 타이머를 찾아서 해제
+		timers[toast.id]?.invalidate() // 타이머 중단
+		timers.removeValue(forKey: toast.id) // 딕셔너리에서 제거
+		
+		// 에니메이션과 함께 토스트를 배열에서 제거
+		withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
+			activeToasts.removeAll(where: { $0.id == toast.id })
+		}
+	}
+	
+	/// 화면에 표시된 모든 토스트를 한 번에 제거하는 함수
+	func dismissAllToast() {
+		// 모든 타이머 정리
+		// 1. 모든 타이머 invalidate()
+		timers.values.forEach { timer in
+			timer.invalidate()
+		}
+		// 2. timers를 메모리에서 삭제
+		timers.removeAll()
+		
+		// 모든 토스트 제거
+		withAnimation(.spring) {
+			activeToasts.removeAll()
+		}
+	}
 }
 
 // MARK: - 메인 토스트 시스템 뷰
@@ -126,12 +191,123 @@ struct NotificationToastSystem: View {
 	// MARK: - 메인 컨텐츠 (데모용 화면)
 	/// 토스트 시스템을 테스트할 수 있는 데모 확인
 	private var mainContent: some View {
-		Text("메인 콘텐츠")
+		NavigationStack {
+			VStack(spacing: 30) {
+				
+				Spacer()
+				
+				// MARK: - 토스트 타입별 테스트 버튼 그룹
+				VStack(spacing: 20) {
+					// 성공 토스트 버튼
+					Button {
+						// Action
+						toastManager.showToast(
+							type: .success,
+							title: "성공!",
+							message: "파일이 성공적으로 저장되었습니다"
+						)
+					} label: {
+						ToastDemoButton(
+							title: "Success Toast",
+							icon: "checkmark.circle.fill",
+							color: .green
+						)
+					}
+					// 경고 토스트 버튼
+					Button {
+						// Action
+						toastManager.showToast(
+							type: .warning,
+							title: "주의 필요"
+						)
+					} label: {
+						ToastDemoButton(
+							title: "Warning Toast",
+							icon: "exclamationmark.triangle.fill",
+							color: .orange
+						)
+					}
+					// 에러 토스트 버튼
+					Button {
+						// Action
+						toastManager.showToast(
+							type: .error,
+							title: "오류 발생",
+							message: "네트워크 연결을 확인하고 다시 시도해 주세요"
+						)
+					} label: {
+						ToastDemoButton(
+							title: "Error Toast",
+							icon: "xmark.circle.fill",
+							color: .red
+						)
+					}
+					// 인포 토스트 버튼
+					Button {
+						// Action
+						toastManager.showToast(
+							type: .info,
+							title: "새로운 업데이트가 있습니다"
+						)
+					} label: {
+						ToastDemoButton(
+							title: "Info Toast",
+							icon: "info.circle.fill",
+							color: .blue
+						)
+					}
+				} //:VSTACK
+				.padding()
+				
+				Spacer()
+				
+			} //:VSTACK
+			.navigationTitle("Toast System")
+		} //:NAVSTACK
 	}
 	
 	/// 화면 상단에 토스트들을 표시하는 오버레이
 	private var toastOverlay: some View {
-		Text("토스트 오버레이")
+		VStack(spacing: 10) {
+			ForEach(toastManager.activeToasts, id: \.self) { toast in
+				ToastView(
+					toast: toast,
+					onDismiss: {
+						// 클로저로 각 토스트의 닫기 액션 전달
+						toastManager.dismissToast(toast)
+					}
+				)
+				// 핵심! 각 토스트 타입별로 다른 Transition 효과 적용
+				.transition(toast.type.transition)
+				
+			}
+			
+			Spacer()
+			
+			// MARK: - 현재 상태 표시 및 전체 삭제 버튼
+			VStack(spacing: 10) {
+				if !toastManager.activeToasts.isEmpty {
+					Text("현재 \(toastManager.activeToasts.count)개의 토스트가 표시 중")
+						.font(.caption)
+						.foregroundStyle(.secondary)
+					
+					// 모든 토스트 닫기 버튼
+					Button {
+						// Action
+						toastManager.dismissAllToast()
+					} label: {
+						Text("모든 토스트 닫기")
+					}
+					.buttonStyle(.bordered)
+					.tint(Color.red)
+					
+				}
+				
+			} //:VSTACK
+			
+		} //:VSTACK
+		.padding(.top, 50)
+		.padding(.horizontal, 15)
 	}
 }
 
