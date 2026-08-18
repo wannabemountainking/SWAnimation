@@ -119,12 +119,99 @@ struct SourceControlView: View {
 	var body: some View {
 		TemplateView(
 			title: "Source 제어하기",
-			descriptionText: "isSource 파라미터로 어떤 뷰가 기준이 될 지를 결정할 수 있습니다",
+			descriptionText: "isSource 파라미터로 어떤 뷰가 기준이 될 지를 설정할 수 있습니다",
 			content: {
-				
+				VStack(spacing: 30) {
+					// MARK: - 현재 Source 상태 표시
+					VStack(spacing: 10) {
+						Text("현재 Source: \(yellowIsSource ? "노란색" : "파란색") 뷰")
+							.font(.title2)
+							.fontWeight(.bold)
+							.foregroundStyle(yellowIsSource ? Color.yellow : .blue)
+						Text("Source 뷰의 크기와 위치에 다른 뷰가 맞춰집니다")
+							.font(.caption)
+							.foregroundStyle(.secondary)
+							.multilineTextAlignment(.center)
+						
+						// MARK: - 뷰 테이블
+						HStack(spacing: 10) {
+							Text("노란색 80 X 80")
+								.frame(maxWidth: .infinity)
+								.font(.caption)
+								.fontWeight(.semibold)
+							
+							Text("파란색 120 X 60")
+								.frame(maxWidth: .infinity)
+								.font(.caption)
+								.fontWeight(.semibold)
+						} //:HSTACK
+						
+						// MARK: - 매칭되는 뷰
+						HStack(spacing: 30) {
+							// 노란색 뷰
+							RoundedRectangle(cornerRadius: 15)
+								.fill(.yellow.opacity(0.8))
+								.frame(width: 80, height: 80)
+								.overlay {
+									VStack(spacing: 5) {
+										Text("Yellow")
+											.font(.caption)
+											.fontWeight(.bold)
+										// Source 표시
+										if yellowIsSource {
+											Text("SOURCE")
+												.font(.system(size: 8))
+												.padding(.horizontal, 6)
+												.padding(.vertical, 3)
+												.background(Color.red)
+												.foregroundStyle(.white)
+												.cornerRadius(5)
+										}
+									} //:VSTACK
+								}
+								.matchedGeometryEffect(id: "dynamicShape", in: sourceNamespace, isSource: yellowIsSource)
+							
+							// 파란색 뷰
+							RoundedRectangle(cornerRadius: 15)
+								.fill(.blue.opacity(0.8))
+								.frame(width: 120, height: 60)
+								.overlay {
+									VStack(spacing: 5) {
+										Text("Blue")
+											.font(.caption)
+											.fontWeight(.bold)
+										// Source 표시
+										if !yellowIsSource {
+											Text("SOURCE")
+												.font(.system(size: 8))
+												.padding(.horizontal, 6)
+												.padding(.vertical, 3)
+												.background(Color.red)
+												.foregroundStyle(.white)
+												.cornerRadius(5)
+										}
+									} //:VSTACK
+								}
+								.matchedGeometryEffect(id: "dynamicShape", in: sourceNamespace, isSource: !yellowIsSource)
+						} //:HSTACK
+						
+						PurpleButton(
+							title: "Source 전환하기",
+							action: {
+								withAnimation(.spring) {
+									yellowIsSource.toggle()
+								}
+							}
+						)
+					} //:VSTACK
+				} //:VSTACK
 			},
 			notes: """
-				
+				Source 설정 가이드?:
+				- 크기가 일정한 뷰를 Source로 설정하는 것이 좋음
+				- Hero Animation 에서는 시작 뷰가 Source 역할
+				- source 변경 시 자동으로 에니메이션에 적용
+				- 여러 뷰 중 하나만 isSource = true 로 설정(source는 unique 해야 하니까)
 				"""
 		)
 	}
