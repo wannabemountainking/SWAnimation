@@ -18,6 +18,7 @@
 		EE389AB62FE13C68006F8252 /* TextColorsizeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE389AB52FE13C68006F8252 /* TextColorsizeAnimationView.swift */; };
 		EE389AB82FE13F9A006F8252 /* TextAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE389AB72FE13F9A006F8252 /* TextAnimate.swift */; };
 		EE7480362FFA9160000BB197 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7480352FFA9160000BB197 /* SkeletonView.swift */; };
+		EE7A67E730355FF4007E7F27 /* ButtonSwitcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7A67E630355FF4007E7F27 /* ButtonSwitcherView.swift */; };
 		EE7C32943010474F007BC55D /* SpringOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C32933010474F007BC55D /* SpringOnboarding.swift */; };
 		EE7CF16B301F6AF5007095EB /* TransitionCombined.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF16A301F6AF5007095EB /* TransitionCombined.swift */; };
 		EE7DBAD12FE232AD0092EB69 /* TrimAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */; };
@@ -27,6 +28,7 @@
 		EE8DA991301F509400544EB7 /* TransitionIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DA990301F509400544EB7 /* TransitionIntro.swift */; };
 		EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */; };
 		EE8EA9F4300F0B90006811AA /* InterpolatingSpring2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8EA9F3300F0B90006811AA /* InterpolatingSpring2.swift */; };
+		EE92C5CD30353E3200B8BDB2 /* FormLabelMGE.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE92C5CC30353E3200B8BDB2 /* FormLabelMGE.swift */; };
 		EE9A44412FF925A1008B522C /* LandingAnimation1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9A44402FF925A1008B522C /* LandingAnimation1.swift */; };
 		EE9B7AA03010715700E71155 /* ElasticMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9B7A9F3010715700E71155 /* ElasticMenuView.swift */; };
 		EE9DA0B82FDBFB6E00A2C50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9DA0B42FDBFB6E00A2C50E /* Assets.xcassets */; };
@@ -54,6 +56,7 @@
 		EE389AB52FE13C68006F8252 /* TextColorsizeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColorsizeAnimationView.swift; sourceTree = "<group>"; };
 		EE389AB72FE13F9A006F8252 /* TextAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnimate.swift; sourceTree = "<group>"; };
 		EE7480352FFA9160000BB197 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
+		EE7A67E630355FF4007E7F27 /* ButtonSwitcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSwitcherView.swift; sourceTree = "<group>"; };
 		EE7C32933010474F007BC55D /* SpringOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringOnboarding.swift; sourceTree = "<group>"; };
 		EE7CF16A301F6AF5007095EB /* TransitionCombined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCombined.swift; sourceTree = "<group>"; };
 		EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimAnimate.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 		EE8DA990301F509400544EB7 /* TransitionIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionIntro.swift; sourceTree = "<group>"; };
 		EE8DB0722FDEB8AF00C68B55 /* Curves1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curves1.swift; sourceTree = "<group>"; };
 		EE8EA9F3300F0B90006811AA /* InterpolatingSpring2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolatingSpring2.swift; sourceTree = "<group>"; };
+		EE92C5CC30353E3200B8BDB2 /* FormLabelMGE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabelMGE.swift; sourceTree = "<group>"; };
 		EE9A44402FF925A1008B522C /* LandingAnimation1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingAnimation1.swift; sourceTree = "<group>"; };
 		EE9B7A9F3010715700E71155 /* ElasticMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElasticMenuView.swift; sourceTree = "<group>"; };
 		EE9DA0A62FDBFB3D00A2C50E /* SWAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				EE813A293033488D00F463BF /* BasicMGE1.swift */,
+				EE92C5CC30353E3200B8BDB2 /* FormLabelMGE.swift */,
+				EE7A67E630355FF4007E7F27 /* ButtonSwitcherView.swift */,
 			);
 			path = 05_MGE;
 			sourceTree = "<group>";
@@ -289,7 +295,9 @@
 				EE253DF42FE4D24600B6C298 /* RepeatOption.swift in Sources */,
 				EE9E8A622FFB3F4600089A7B /* SkeletonDemo.swift in Sources */,
 				9181F092300A8D6900DBFE61 /* SpringIntro.swift in Sources */,
+				EE7A67E730355FF4007E7F27 /* ButtonSwitcherView.swift in Sources */,
 				EE389AB82FE13F9A006F8252 /* TextAnimate.swift in Sources */,
+				EE92C5CD30353E3200B8BDB2 /* FormLabelMGE.swift in Sources */,
 				EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */,
 				EEAB4B722FDEA5B900C4145B /* Intro1.swift in Sources */,
 				916FFE052FDFEB0D003F9473 /* FrameOpcityAnimate.swift in Sources */,
