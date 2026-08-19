@@ -69,15 +69,29 @@ struct ButtonSwitcherView: View {
 						Text("액션 버튼을 선택하세요")
 							.font(.subheadline)
 							.foregroundStyle(.secondary)
-						
+                        HStack(spacing: 20) {
+                            ForEach(actionButtons, id: \.id) { button in
+                                if button.id == selectedActionID {
+                                    // 선택된 버튼 자리 - 플레이스 홀더
+                                    placeholderButton()
+                                } else {
+                                    // 선택되지 않은 버튼들
+                                    actionButton(button: button)
+                                        .matchedGeometryEffect(id: button.id, in: buttonNamespace)
+                                }
+                            }
+                        } //:HSTACK
 						
 					} //:VSTACK
 					
 				} //:VSTACK
 			},
-			notes: """
-				
-				"""
+			notes:
+                """
+                버튼 위치 스위처 핵심:
+                - MatchedGeometryEffect 로 버튼의 물리적 위치 이동
+                - 버튼 간의 부드러운 위치 교환 에니메이션
+                """
 		)
     }
 	
@@ -100,6 +114,52 @@ struct ButtonSwitcherView: View {
 				.shadow(color: .accent.opacity(0.3), radius: 10, x: 0, y: 5)
 		)
 	}
+    
+    private func placeholderButton() -> some View {
+        VStack(spacing: 10) {
+            Image(systemName: "circle.dashed")
+                .font(.title2)
+                .foregroundStyle(.secondary.opacity(0.5))
+            Text("선택됨")
+                .font(.caption)
+                .foregroundStyle(.secondary.opacity(0.5))
+        } //:VSTACK
+        .frame(width: 80, height: 80)
+        .background(
+            RoundedRectangle(cornerRadius: 15)
+                .fill(.secondary.opacity(0.1))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(Color.secondary.opacity(0.3), lineWidth: 1)
+                        .strokeBorder(style: StrokeStyle(lineWidth: 1, dash: [5, 3]))
+                )
+        )
+    }
+    
+    /// 선택되지 않음 상태의 일반 액션 버튼
+    private func actionButton(button: ActionButton) -> some View {
+        Button {
+            // Action
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.9)) {
+                selectedActionID = button.id
+            }
+        } label: {
+            VStack(spacing: 10) {
+                Image(systemName: button.icon)
+                    .font(.title2)
+                    .foregroundStyle(.accent)
+                Text(button.title)
+                    .font(.caption)
+                    .foregroundStyle(.accent)
+            } //:VSTACK
+            .frame(width: 80, height: 80)
+            .background(
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(.white)
+                    .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
+            )
+        }
+    }
 }
 
 #Preview {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		916FFE052FDFEB0D003F9473 /* FrameOpcityAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916FFE042FDFEB0D003F9473 /* FrameOpcityAnimate.swift */; };
+		91712F5830359F2A00E466F0 /* ShoppingCartMGE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91712F5730359F2A00E466F0 /* ShoppingCartMGE.swift */; };
 		917696E430236471003E4231 /* OnboardingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917696E330236471003E4231 /* OnboardingTransition.swift */; };
 		917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F94DC2FDC5CD400B00A91 /* TemplateView.swift */; };
 		9181F092300A8D6900DBFE61 /* SpringIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9181F091300A8D6900DBFE61 /* SpringIntro.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		916FFE042FDFEB0D003F9473 /* FrameOpcityAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameOpcityAnimate.swift; sourceTree = "<group>"; };
+		91712F5730359F2A00E466F0 /* ShoppingCartMGE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartMGE.swift; sourceTree = "<group>"; };
 		917696E330236471003E4231 /* OnboardingTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTransition.swift; sourceTree = "<group>"; };
 		917F94DC2FDC5CD400B00A91 /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
 		9181F091300A8D6900DBFE61 /* SpringIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringIntro.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				EE7480342FFA9139000BB197 /* Skeleton */,
 				EE7C32933010474F007BC55D /* SpringOnboarding.swift */,
 				EE9B7A9F3010715700E71155 /* ElasticMenuView.swift */,
+				91712F5730359F2A00E466F0 /* ShoppingCartMGE.swift */,
 			);
 			path = 01_Practice;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				EE253DF42FE4D24600B6C298 /* RepeatOption.swift in Sources */,
 				EE9E8A622FFB3F4600089A7B /* SkeletonDemo.swift in Sources */,
 				9181F092300A8D6900DBFE61 /* SpringIntro.swift in Sources */,
+				91712F5830359F2A00E466F0 /* ShoppingCartMGE.swift in Sources */,
 				EE7A67E730355FF4007E7F27 /* ButtonSwitcherView.swift in Sources */,
 				EE389AB82FE13F9A006F8252 /* TextAnimate.swift in Sources */,
 				EE92C5CD30353E3200B8BDB2 /* FormLabelMGE.swift in Sources */,
