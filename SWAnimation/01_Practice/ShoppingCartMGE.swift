@@ -66,7 +66,12 @@ struct ShoppingCartMGE: View {
 				)
             } else {
                 // 장바구니 화면
-				CartView(cartItems: <#Binding<[CartItem]>#>, showingCart: <#Binding<Bool>#>, namespace: <#Namespace.ID#>)
+                CartView(
+                    cartItems: $cartItems,
+                    showingCart: $showingCart,
+                    namespace: shoppingNamespace,
+                    toastManager: $toastManager
+                )
             }
             
 			// MARK: - 토스트 오버레이
@@ -257,9 +262,64 @@ struct CartView: View {
 	@Binding var cartItems: [CartItem] // 장바구니 아이템 목록 (양방향 바인딩)
 	@Binding var showingCart: Bool // 화면 전환 상태 제어
 	let namespace: Namespace.ID
+    @Binding var toastManager: ToastManager // 토스트 메니져 바인딩
 	
     var body: some View {
-        Text("장바구니 화면")
+        // Toast Overlay를 위한 ZStack
+        ZStack {
+            // 장바구니 영역
+            VStack(spacing: 20) {
+                // MARK: - 헤더 영역
+                HStack(spacing: 10) {
+                    // 뒤로 가기 버튼
+                    Button {
+                        // Action
+                        withAnimation(.spring) {
+                            showingCart = false
+                        }
+                    } label: {
+                        Text("← 쇼핑 계속")
+                    }
+                    .tint(.accent)
+                    
+                    Spacer()
+                    
+                    Text("장바구니")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.accent)
+                } //:HSTACK
+                .padding(.horizontal)
+                
+                // MARK: - 컨텐츠 영역
+                /// 조건부 렌더링 - 빈 장바구니와 아이템 목록 분리
+                if cartItems.isEmpty {
+                    // 빈 장바구니 상태 표시
+                    EmptyCartView(showingCart: $showingCart)
+                } else {
+                    // 장바구니 아이템 목록
+                    ScrollView {
+                        VStack(spacing: 15) {
+                            // 반복문. cartItemRow 가져오기
+                            ForEach(cartItems) { item in
+                                CartItemRow(
+                                    item: item,
+                                    namespace: namespace,
+                                    onCartAction: { action in
+                                        // 수량 조절 액션 처리
+                                        
+                                    }
+                                )
+                            } //:LOOP
+                        } //:VSTACK
+                        .padding(.horizontal)
+                    } //:SCROLL
+                }//:CONDITIONAL
+                
+            } //:HSTACK
+            // 토스트 메시지 영역
+            
+        } //:ZSTACK
     }
 }
 
@@ -385,6 +445,32 @@ struct QuantityControl: View {
 	}
 }
 
+struct EmptyCartView: View {
+    
+    @Binding var showingCart: Bool
+    
+    var body: some View {
+        ContentUnavailableView {
+            // Label
+            Label("장바구니가 비어 있습니다", systemImage: "cart")
+        } description: {
+            Text("마음에 드는 상품을 찾아 담아 보세요")
+        } actions: {
+            Button {
+                // Action
+                withAnimation(.spring) {
+                    showingCart = false
+                }
+            } label: {
+                Text("쇼핑 시작하기")
+            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
+        }
+
+    }
+}
+
 
 // MARK: - 프리뷰
 
@@ -413,4 +499,8 @@ struct QuantityControl: View {
 		namespace: namespace,
 		onCartAction: {_ in }
 	)
+}
+
+#Preview("EmptyCartView") {
+    EmptyCartView(showingCart: .constant(false))
 }
