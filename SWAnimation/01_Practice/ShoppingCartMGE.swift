@@ -307,20 +307,83 @@ struct CartView: View {
                                     namespace: namespace,
                                     onCartAction: { action in
                                         // 수량 조절 액션 처리
-                                        
+										switch action {
+										case .increase: increaseQuantity(item: item)
+										case .decrease: decreaseQuantity(item: item)
+										}
                                     }
                                 )
                             } //:LOOP
                         } //:VSTACK
                         .padding(.horizontal)
                     } //:SCROLL
+					
+					Spacer()
+					
+					/// 장바구니 요약 세션
+					CartSummerySection(cartItems: cartItems)
                 }//:CONDITIONAL
                 
-            } //:HSTACK
+            } //:VStack
             // 토스트 메시지 영역
-            
+			VStack(spacing: 30) {
+				ForEach(toastManager.activeToasts) { toast in
+					ToastView(toast: toast) {
+						toastManager.dismissToast(toast)
+					}
+					.transition(toast.type.transition)
+				}
+				Spacer()
+			} //:VSTACK
+			.padding(.top, 50)
+			.padding(.horizontal, 15)
         } //:ZSTACK
     }
+	// MARK: - 수량 관리 메서드
+	/// 특정 아이템의 수량을 증가시키는 메서드
+	private func increaseQuantity(item: CartItem) {
+		withAnimation(.easeInOut) {
+			// 배열에서 해당 아이템을 찾아서 수량 증가
+			// 카트 아이템 아이디와 파라미터로 받은 아이템의 아이디가 같은 경우 (누른 cartItem의 cartItems에서의 인덱스 값을 찾아 해당 cartItem을 얻고 그 속성 quantity를 1 증가시키는 로직)
+			if let index = cartItems.firstIndex(where: { $0.id == item.id }) {
+				cartItems[index].quantity += 1 // 기존 cart array에 해당되는 index 값의 수량에 기존 값에 1을 더해줌
+			}
+		}
+		
+		// 토스트 메시지 표시 (기존 ToastManager)
+		toastManager.showToast(
+			type: .success,
+			title: "\(item.product.name) 수량이 중가되었습니다"
+		)
+	}
+	
+	/// 특정 아이템 수량을 감소시키는 메서드
+	private func decreaseQuantity(item: CartItem) {
+		withAnimation(.easeInOut) {
+			if let index = cartItems.firstIndex(where: { $0.id == item.id }) {
+				if cartItems[index].quantity > 1 {
+					// 이미 설정 값이 있기 때문에 수량 -1
+					cartItems[index].quantity -= 1
+					
+					toastManager.showToast(
+						type: .warning,
+						title: "\(item.product.name) 수량이 감소되었습니다"
+					)
+				} else {
+					// 수량이 1일 경우 아잍템을 완전 제거
+					cartItems.remove(at: index)
+					
+					toastManager.showToast(
+						type: .error,
+						title: "상품 취소",
+						message: "\(item.product.name)이 장바구니에서 삭제되었습니다"
+					)
+				}
+			}
+		}
+		
+		
+	}
 }
 
 // MARK: - 장바구니 아이템 행 컴포넌트
@@ -471,6 +534,47 @@ struct EmptyCartView: View {
     }
 }
 
+// MARK: - 장바구니 요약 섹션
+/// 장바구니 하단에 표시되는 총 금액과 결제 버튼 영역
+struct CartSummerySection: View {
+	let cartItems: [CartItem]
+	/// 전체 장바구니의 총 가격 계산
+	private var totalPrice: Int {
+		cartItems.reduce(0) { result, currentCartItem in
+			result + currentCartItem.subtotalPrice
+		}
+	}
+	
+	var body: some View {
+		VStack(spacing: 15) {
+			Divider()
+			
+			// 총 금액 표시
+			HStack(spacing: 10) {
+				Text("총 금액")
+					.font(.headline)
+					.fontWeight(.bold)
+				
+				Spacer()
+				
+				Text("₩\(totalPrice.formatted())")
+					.font(.title2)
+					.fontWeight(.bold)
+					.foregroundStyle(.accent)
+			} //:HSTACK
+			.padding(.horizontal)
+			
+			// 결제 버튼
+			PurpleButton(
+				title: "결제하기 \(cartItems.count) 개 상품",
+				action: {
+					// 결제 로직
+				}
+			)
+		} //:VSTACK
+	}
+}
+
 
 // MARK: - 프리뷰
 
@@ -503,4 +607,15 @@ struct EmptyCartView: View {
 
 #Preview("EmptyCartView") {
     EmptyCartView(showingCart: .constant(false))
+}
+
+#Preview("수량 조절 버튼") {
+	CartSummerySection(
+		cartItems: [
+			CartItem(
+				product: Product(name: "iPad", price: 850_000, icon: "ipad"),
+				quantity: 2
+			)
+		]
+	)
 }
