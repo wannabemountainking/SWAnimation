@@ -25,6 +25,11 @@
 		EE7DBAD12FE232AD0092EB69 /* TrimAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */; };
 		EE813A2A3033488D00F463BF /* BasicMGE1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE813A293033488D00F463BF /* BasicMGE1.swift */; };
 		EE821E77303B1F1A005F7DB4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE821E76303B1F1A005F7DB4 /* User.swift */; };
+		EE8534BF303C1A60009E5BB0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8534BE303C1A60009E5BB0 /* UserService.swift */; };
+		EE8534C1303C2139009E5BB0 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8534C0303C2139009E5BB0 /* UserViewModel.swift */; };
+		EE8534C3303C280D009E5BB0 /* RandomUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8534C2303C280D009E5BB0 /* RandomUserView.swift */; };
+		EE8534C5303C281B009E5BB0 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8534C4303C281B009E5BB0 /* UserDetailView.swift */; };
+		EE8534C7303C284C009E5BB0 /* UserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8534C6303C284C009E5BB0 /* UserCard.swift */; };
 		EE86CCAA3027420000CEDB8D /* NotificationToastSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE86CCA93027420000CEDB8D /* NotificationToastSystem.swift */; };
 		EE88C9822FDFA5660006FFC0 /* LocationAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */; };
 		EE8DA991301F509400544EB7 /* TransitionIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8DA990301F509400544EB7 /* TransitionIntro.swift */; };
@@ -65,6 +70,11 @@
 		EE7DBAD02FE232AD0092EB69 /* TrimAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimAnimate.swift; sourceTree = "<group>"; };
 		EE813A293033488D00F463BF /* BasicMGE1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMGE1.swift; sourceTree = "<group>"; };
 		EE821E76303B1F1A005F7DB4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EE8534BE303C1A60009E5BB0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		EE8534C0303C2139009E5BB0 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		EE8534C2303C280D009E5BB0 /* RandomUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserView.swift; sourceTree = "<group>"; };
+		EE8534C4303C281B009E5BB0 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		EE8534C6303C284C009E5BB0 /* UserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCard.swift; sourceTree = "<group>"; };
 		EE86CCA93027420000CEDB8D /* NotificationToastSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationToastSystem.swift; sourceTree = "<group>"; };
 		EE88C9812FDFA5660006FFC0 /* LocationAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnimate.swift; sourceTree = "<group>"; };
 		EE8DA990301F509400544EB7 /* TransitionIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionIntro.swift; sourceTree = "<group>"; };
@@ -143,8 +153,21 @@
 			isa = PBXGroup;
 			children = (
 				EE821E76303B1F1A005F7DB4 /* User.swift */,
+				EE8534BE303C1A60009E5BB0 /* UserService.swift */,
+				EE8534C0303C2139009E5BB0 /* UserViewModel.swift */,
+				EE8534C2303C280D009E5BB0 /* RandomUserView.swift */,
+				EE8534C4303C281B009E5BB0 /* UserDetailView.swift */,
+				EE8534C8303C2853009E5BB0 /* Components */,
 			);
 			path = RandomUserMGE;
+			sourceTree = "<group>";
+		};
+		EE8534C8303C2853009E5BB0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EE8534C6303C284C009E5BB0 /* UserCard.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		EE8DA98F301F507E00544EB7 /* 04_Transition */ = {
@@ -307,7 +330,9 @@
 				EE1A9ADC2FE3822B00F5E16D /* DurationOption.swift in Sources */,
 				EEA6794A2FF9085E0002E66F /* PlusShape.swift in Sources */,
 				EE253DF42FE4D24600B6C298 /* RepeatOption.swift in Sources */,
+				EE8534C1303C2139009E5BB0 /* UserViewModel.swift in Sources */,
 				EE9E8A622FFB3F4600089A7B /* SkeletonDemo.swift in Sources */,
+				EE8534BF303C1A60009E5BB0 /* UserService.swift in Sources */,
 				9181F092300A8D6900DBFE61 /* SpringIntro.swift in Sources */,
 				91712F5830359F2A00E466F0 /* ShoppingCartMGE.swift in Sources */,
 				EE7A67E730355FF4007E7F27 /* ButtonSwitcherView.swift in Sources */,
@@ -320,6 +345,7 @@
 				EEB5B4813020346E00FA96C4 /* AsymmetricTransition.swift in Sources */,
 				EE8EA9F4300F0B90006811AA /* InterpolatingSpring2.swift in Sources */,
 				EE813A2A3033488D00F463BF /* BasicMGE1.swift in Sources */,
+				EE8534C5303C281B009E5BB0 /* UserDetailView.swift in Sources */,
 				917696E430236471003E4231 /* OnboardingTransition.swift in Sources */,
 				917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */,
 				EE1A9ADE2FE3885100F5E16D /* DelayOption.swift in Sources */,
@@ -327,9 +353,11 @@
 				EEBA37D9300D00D3009D295A /* InteractiveSpring1.swift in Sources */,
 				EE8DA991301F509400544EB7 /* TransitionIntro.swift in Sources */,
 				EE821E77303B1F1A005F7DB4 /* User.swift in Sources */,
+				EE8534C3303C280D009E5BB0 /* RandomUserView.swift in Sources */,
 				EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */,
 				EE1A9AE02FE38F4200F5E16D /* ColorPulseView.swift in Sources */,
 				EE7C32943010474F007BC55D /* SpringOnboarding.swift in Sources */,
+				EE8534C7303C284C009E5BB0 /* UserCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

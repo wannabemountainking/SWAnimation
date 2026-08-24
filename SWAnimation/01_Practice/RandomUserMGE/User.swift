@@ -20,6 +20,7 @@
  */
 
 import Foundation
+import SwiftUI
 
 // MARK: - API 응답 레퍼 구조체
 /// RandomUser API 응답을 감싸는 레퍼 구조체 (API에서 날아오는 자료 JSON 구조)
@@ -96,7 +97,7 @@ struct User: Identifiable, Codable {
 	
 	// MARK: - 커스텀 디코딩 initializer
 	/// JSON 파싱 시, 자동으로 호출되어 User 객체를 생성
-	init(decoder: Decoder) throws {
+	init(from decoder: Decoder) throws {
 		// JSON 데이터 Parsing을 위한 컨테이너 생성
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		
@@ -126,4 +127,28 @@ struct User: Identifiable, Codable {
 		self.picture = picture
 	}
 	
+}
+
+#Preview("디코딩 테스트") {
+	let json = """
+	{
+		"gender": "female",
+		"name": { "title": "Ms", "first": "Jane", "last": "Doe" },
+		"location": { "city": "Seoul", "state": "Seoul", "country": "Korea" },
+		"email": "jane@example.com",
+		"phone": "010-1234-5678",
+		"dob": { "date": "1990-01-01", "age": 34 },
+		"picture": { "large": "", "medium": "", "thumbnail": "" }
+	}
+	"""
+	let data = json.data(using: .utf8)!
+	
+	do {
+		let user = try JSONDecoder().decode(User.self, from: data)
+		print("✅ 디코딩 성공:", user.gender, user.name.fullName)
+	} catch {
+		print("❌ 디코딩 실패:", error)
+	}
+	
+	return Text("Xcode 콘솔을 확인하세요")
 }
