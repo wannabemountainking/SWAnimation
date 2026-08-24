@@ -48,9 +48,6 @@ struct RandomUserView: View {
 					.padding(.top, 40) // 상태바 영역 고려한 상단 여백
 					.padding(.bottom, 20) // 메인 콘텐츠와의 영역 확보
 					
-					ForEach(viewModel.users) { user in
-						Text(user.name.fullName)
-					}
 					
 				} //:VSTACK
 			} else {
@@ -59,11 +56,6 @@ struct RandomUserView: View {
 			} //:LOOP
 			
 		} //:ZSTACK
-		.onAppear {
-			Task {
-				await viewModel.loadUsers()
-			}
-		}
     }
 }
 

@@ -10,6 +10,7 @@
 		916FFE052FDFEB0D003F9473 /* FrameOpcityAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916FFE042FDFEB0D003F9473 /* FrameOpcityAnimate.swift */; };
 		91712F5830359F2A00E466F0 /* ShoppingCartMGE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91712F5730359F2A00E466F0 /* ShoppingCartMGE.swift */; };
 		917696E430236471003E4231 /* OnboardingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917696E330236471003E4231 /* OnboardingTransition.swift */; };
+		917F2F6C303CA28D00C33713 /* UserScrollViewWithReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F2F6B303CA28D00C33713 /* UserScrollViewWithReader.swift */; };
 		917F94DD2FDC5CD400B00A91 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F94DC2FDC5CD400B00A91 /* TemplateView.swift */; };
 		9181F092300A8D6900DBFE61 /* SpringIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9181F091300A8D6900DBFE61 /* SpringIntro.swift */; };
 		EE1A9ADC2FE3822B00F5E16D /* DurationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A9ADB2FE3822B00F5E16D /* DurationOption.swift */; };
@@ -55,6 +56,7 @@
 		916FFE042FDFEB0D003F9473 /* FrameOpcityAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameOpcityAnimate.swift; sourceTree = "<group>"; };
 		91712F5730359F2A00E466F0 /* ShoppingCartMGE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartMGE.swift; sourceTree = "<group>"; };
 		917696E330236471003E4231 /* OnboardingTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTransition.swift; sourceTree = "<group>"; };
+		917F2F6B303CA28D00C33713 /* UserScrollViewWithReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScrollViewWithReader.swift; sourceTree = "<group>"; };
 		917F94DC2FDC5CD400B00A91 /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
 		9181F091300A8D6900DBFE61 /* SpringIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringIntro.swift; sourceTree = "<group>"; };
 		EE1A9ADB2FE3822B00F5E16D /* DurationOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationOption.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				EE8534C6303C284C009E5BB0 /* UserCard.swift */,
+				917F2F6B303CA28D00C33713 /* UserScrollViewWithReader.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				EE8DA991301F509400544EB7 /* TransitionIntro.swift in Sources */,
 				EE821E77303B1F1A005F7DB4 /* User.swift in Sources */,
 				EE8534C3303C280D009E5BB0 /* RandomUserView.swift in Sources */,
+				917F2F6C303CA28D00C33713 /* UserScrollViewWithReader.swift in Sources */,
 				EE8DB0732FDEB8AF00C68B55 /* Curves1.swift in Sources */,
 				EE1A9AE02FE38F4200F5E16D /* ColorPulseView.swift in Sources */,
 				EE7C32943010474F007BC55D /* SpringOnboarding.swift in Sources */,

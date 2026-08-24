@@ -36,8 +36,9 @@ final class UserService {
 	
 	/// 사용자 데이터를 가져오는 메인 함수 - parameter로 results=10 설정
 	func fetchUsers(count: Int = 10) async throws -> [User] {
+
 		/// BaseURL을 URL 객체로 반환
-		let url: URL = URL(string: "\(baseURL)&results=\(count)")!
+        let url: URL = URL(string: "\(baseURL)?results=\(count)")!
 		/// 비동기 네트워크 호출 URLSession.shared.data(from: url)
 		let (data, _) = try await URLSession.shared.data(from: url)
 		/// JSON 파싱: JSONDecoder를 사용해서 Data를 Swift 객체로 반환 -> 이때 User의 init 작동

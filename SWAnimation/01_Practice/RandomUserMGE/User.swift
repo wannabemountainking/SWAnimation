@@ -38,7 +38,7 @@ struct RandomUserResponse: Codable {
 // MARK: - 메인 사용자 데이터 모델
 /// Random API에서 받아오는 사용자 정보를 담는 메인 모델
 struct User: Identifiable, Codable {
-	var id = UUID() // ForEach 및 스크롤 위치 추적용 고유 식별자
+    var id: UUID // ForEach 및 스크롤 위치 추적용 고유 식별자
 	
 	let gender: String // 성별
 	let name: Name // 이름 정보 (Nested struct)
@@ -126,29 +126,6 @@ struct User: Identifiable, Codable {
 		self.dob = dob
 		self.picture = picture
 	}
-	
 }
 
-#Preview("디코딩 테스트") {
-	let json = """
-	{
-		"gender": "female",
-		"name": { "title": "Ms", "first": "Jane", "last": "Doe" },
-		"location": { "city": "Seoul", "state": "Seoul", "country": "Korea" },
-		"email": "jane@example.com",
-		"phone": "010-1234-5678",
-		"dob": { "date": "1990-01-01", "age": 34 },
-		"picture": { "large": "", "medium": "", "thumbnail": "" }
-	}
-	"""
-	let data = json.data(using: .utf8)!
-	
-	do {
-		let user = try JSONDecoder().decode(User.self, from: data)
-		print("✅ 디코딩 성공:", user.gender, user.name.fullName)
-	} catch {
-		print("❌ 디코딩 실패:", error)
-	}
-	
-	return Text("Xcode 콘솔을 확인하세요")
-}
+
