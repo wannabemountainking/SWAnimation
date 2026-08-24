@@ -57,7 +57,7 @@ struct User: Identifiable, Codable {
 		
 		/// 전체 이름을 조합하는 Computed Property
 		var fullName: String {
-			return "\(title), \(first) \(last)"
+			return "\(title). \(first) \(last)"
 		}
 	}
 	
