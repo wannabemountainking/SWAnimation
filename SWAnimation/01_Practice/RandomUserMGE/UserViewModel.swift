@@ -38,6 +38,12 @@ final class UserViewModel {
 	/// UserService 유일의 인스턴스 불러오기
 	private let userService: UserService = .shared
 	
+    // MARK: - 스크롤 위치 관리 프로퍼티들
+    /// 마지막으로 선택한 사용자의 고유 ID를 가리킴
+    var lastSelectedUserID: UUID? = nil
+    /// 스크롤 위치 복원이 필요한 지 여부
+    var shouldRestorePosition: Bool = false
+    
 	// MARK: - 데이터 로딩 메서드
 	func loadUsers() async {
 		// 중복 로드 방지 가드문
@@ -94,5 +100,20 @@ final class UserViewModel {
 		// 새로운 데이터 로드
 		await loadUsers()
 	}
+    
+    // MARK: - 스크롤 위치 관리 메서드들
+    /// 사용자 선택 시 스크롤 위치 정보를 저장
+    func selectUser(user: User) {
+        // 선택한 사용자의 ID 저장
+        lastSelectedUserID = user.id
+        // 복원 플래그 활성화
+        shouldRestorePosition = true
+    }
+    
+    /// 스크롤 위치 복원 관련 상태 초기화
+    func resetScrollPosition() {
+        lastSelectedUserID = nil
+        shouldRestorePosition = false
+    }
 }
 
