@@ -60,5 +60,39 @@ final class UserViewModel {
 		// 로딩 완료
 		isLoading = false
 	}
+	
+	// MARK: - 무한 스크롤 로직
+	
+	/// 추가 사용자 데이터를 로드하는 함수
+	func loadMoreUsers() async {
+		// 중복 로딩 방지
+		guard !isLoadingMore else { return }
+		// 추가 로딩상태 시작
+		isLoadingMore = true
+		errorMessage = nil
+		
+		do {
+			// 추가 데이터 로드 (10명 씩 점진적 로딩) - 웹사이트는 fetch에 랜덤하게 결과 나옴
+			let moreUsers = try await userService.fetchUsers(count: 10)
+			// 기존 데이터에 새 데이터 추가
+			users.append(contentsOf: moreUsers)
+		} catch {
+			errorMessage = error.localizedDescription
+		}
+		
+		// 추가 로딩 완료
+		isLoadingMore = false
+	}
+	
+	// MARK: - 전체 데이터 새로고침
+	func refreshUsers() async {
+		// 기존 데이터 및 상테 초기화
+		users = [] // 사용자 목록 비우기
+		
+		// TODO: - 스크롤 위치 정보 초기화
+		
+		// 새로운 데이터 로드
+		await loadUsers()
+	}
 }
 

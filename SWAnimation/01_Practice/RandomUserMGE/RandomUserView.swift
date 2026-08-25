@@ -48,6 +48,26 @@ struct RandomUserView: View {
 					.padding(.top, 40) // 상태바 영역 고려한 상단 여백
 					.padding(.bottom, 20) // 메인 콘텐츠와의 영역 확보
 					
+					if viewModel.isLoading && viewModel.users.isEmpty {
+						// Loading View
+						LoadingView()
+						
+					} else {
+						UserScrollViewWithReader(
+							users: viewModel.users,
+							namespace: userNamespace,
+							isLoadingMore: viewModel.isLoadingMore,
+							onTap: { user in
+								
+							},
+							onLoadMore: { // 무한 스크롤 로직
+								await viewModel.loadMoreUsers()
+							},
+							onRefresh: { // 리프레시 로직
+								await viewModel.refreshUsers()
+							}
+						)
+					}
 					
 				} //:VSTACK
 			} else {
@@ -56,6 +76,12 @@ struct RandomUserView: View {
 			} //:LOOP
 			
 		} //:ZSTACK
+		.task {
+			// 중복 로딩 방지: 빈 상태일 때만 초기 로딩 수행
+			if viewModel.users.isEmpty {
+				await viewModel.loadUsers()
+			}
+		}
     }
 }
 

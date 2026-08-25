@@ -45,6 +45,7 @@
 		EE9E8A622FFB3F4600089A7B /* SkeletonDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E8A612FFB3F4600089A7B /* SkeletonDemo.swift */; };
 		EEA6794A2FF9085E0002E66F /* PlusShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA679492FF9085E0002E66F /* PlusShape.swift */; };
 		EEAB4B722FDEA5B900C4145B /* Intro1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB4B712FDEA5B900C4145B /* Intro1.swift */; };
+		EEB4C7A7303D898300A79A36 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB4C7A6303D898300A79A36 /* LoadingView.swift */; };
 		EEB5B4813020346E00FA96C4 /* AsymmetricTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB5B4803020346E00FA96C4 /* AsymmetricTransition.swift */; };
 		EEBA207E2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBA207D2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift */; };
 		EEBA37D9300D00D3009D295A /* InteractiveSpring1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBA37D8300D00D3009D295A /* InteractiveSpring1.swift */; };
@@ -92,6 +93,7 @@
 		EE9E8A612FFB3F4600089A7B /* SkeletonDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonDemo.swift; sourceTree = "<group>"; };
 		EEA679492FF9085E0002E66F /* PlusShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusShape.swift; sourceTree = "<group>"; };
 		EEAB4B712FDEA5B900C4145B /* Intro1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro1.swift; sourceTree = "<group>"; };
+		EEB4C7A6303D898300A79A36 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		EEB5B4803020346E00FA96C4 /* AsymmetricTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsymmetricTransition.swift; sourceTree = "<group>"; };
 		EEBA207D2FE0F6A000B8FDC0 /* RotationEffectAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationEffectAnimate.swift; sourceTree = "<group>"; };
 		EEBA37D8300D00D3009D295A /* InteractiveSpring1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveSpring1.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				EE8534C6303C284C009E5BB0 /* UserCard.swift */,
 				917F2F6B303CA28D00C33713 /* UserScrollViewWithReader.swift */,
+				EEB4C7A6303D898300A79A36 /* LoadingView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				9181F092300A8D6900DBFE61 /* SpringIntro.swift in Sources */,
 				91712F5830359F2A00E466F0 /* ShoppingCartMGE.swift in Sources */,
 				EE7A67E730355FF4007E7F27 /* ButtonSwitcherView.swift in Sources */,
+				EEB4C7A7303D898300A79A36 /* LoadingView.swift in Sources */,
 				EE389AB82FE13F9A006F8252 /* TextAnimate.swift in Sources */,
 				EE92C5CD30353E3200B8BDB2 /* FormLabelMGE.swift in Sources */,
 				EE9DA0BA2FDBFB6E00A2C50E /* SWAnimationApp.swift in Sources */,
