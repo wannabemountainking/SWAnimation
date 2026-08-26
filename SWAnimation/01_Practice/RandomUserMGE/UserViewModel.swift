@@ -96,7 +96,7 @@ final class UserViewModel {
 		users = [] // 사용자 목록 비우기
 		
 		// TODO: - 스크롤 위치 정보 초기화
-		
+		resetScrollPosition()
 		// 새로운 데이터 로드
 		await loadUsers()
 	}

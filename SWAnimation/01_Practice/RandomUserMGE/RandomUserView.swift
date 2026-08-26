@@ -51,12 +51,13 @@ struct RandomUserView: View {
 					if viewModel.isLoading && viewModel.users.isEmpty {
 						// Loading View
 						LoadingView()
-						
 					} else {
 						UserScrollViewWithReader(
 							users: viewModel.users,
 							namespace: userNamespace,
 							isLoadingMore: viewModel.isLoadingMore,
+							lastSelectedUserID: viewModel.lastSelectedUserID,
+							shouldRestorePosition: viewModel.shouldRestorePosition,
 							onTap: { user in
                                 // 사용자 카드 텝 시 실행되는 클로저
                                 /*
@@ -74,6 +75,10 @@ struct RandomUserView: View {
 							},
 							onLoadMore: { // 무한 스크롤 로직
 								await viewModel.loadMoreUsers()
+							},
+							onPositionRestored: {
+								// 스크롤 위치 복원 완료 시 실행
+								viewModel.resetScrollPosition()
 							},
 							onRefresh: { // 리프레시 로직
 								await viewModel.refreshUsers()
@@ -106,6 +111,7 @@ struct RandomUserView: View {
 			}
 		}
         .animation(.spring, value: showDetail)
+		.animation(.easeInOut, value: viewModel.shouldRestorePosition)
     }
 }
 

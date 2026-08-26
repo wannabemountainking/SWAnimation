@@ -17,9 +17,9 @@ struct UserScrollViewWithReader: View {
 	/// 추가 로딩 상태 (무한 스크롤 용)
 	let isLoadingMore: Bool
 	/// 마지막으로 선택한 User의 ID (위치 복원용) -> 박스 View들 각각에 붙여놓았던 id
-//	let lastSelectedUserID: UUID?
+	let lastSelectedUserID: UUID?
 	/// 스크롤 위치 복원 할지 말지에 대한 여부
-//	let shouldRestorePosition: Bool
+	let shouldRestorePosition: Bool
 	
 	// MARK: - 이벤트 핸들러
 	/// 사용자 카드 텝 시 실행되는 클로저
@@ -27,7 +27,7 @@ struct UserScrollViewWithReader: View {
 	/// 추가 데이터 로딩이 필요할 때 실행되는 비동기 클로저
 	let onLoadMore: () async -> Void
 	/// 스크롤 위치 복원 완료 시 실행되는 클로저
-//	let onPositionRestored: () -> Void
+	let onPositionRestored: () -> Void
 	/// Pull-to-Refresh 시 실행되는 비동기 클로저
 	let onRefresh: () async -> Void
 	
@@ -71,9 +71,17 @@ struct UserScrollViewWithReader: View {
 				await onRefresh()
 			}
 			
-			// TODO: - 뷰 등장 시 스크롤 위치 복원
+			// MARK: - 뷰 등장 시 스크롤 위치 복원
 			.onAppear {
-				   
+				// 1. 뷰 등장 시 스크롤 위치 복원
+				if shouldRestorePosition,
+				   let userID = lastSelectedUserID {
+					withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) {
+						proxy.scrollTo(userID, anchor: .center)
+					}
+				}
+				// 2. 복원 완료 알림
+				onPositionRestored()
 			}
 			
 		}//: READER
@@ -107,11 +115,11 @@ struct LoadMoreindicator: View {
 		users: Array(repeating: UserService.mockUsers[0], count: 3),
 		namespace: namespace,
 		isLoadingMore: false,
-//		lastSelectedUserID: nil,
-//		shouldRestorePosition: false,
+		lastSelectedUserID: nil,
+		shouldRestorePosition: false,
 		onTap: { _ in },
 		onLoadMore: { },
-//		onPositionRestored: { },
+		onPositionRestored: { },
 		onRefresh: { }
 		)
 	.background {
